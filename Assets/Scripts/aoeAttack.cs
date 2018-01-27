@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// To use this script, attach to an actor, put in the public variables, and then call tryToAttack()
+// To use this script, attach to an actor, put in the public variables, 
+// and then call tryToAttack()
 
 public class aoeAttack : MonoBehaviour {
 
@@ -23,7 +24,7 @@ public class aoeAttack : MonoBehaviour {
 		// }
 	}
 
-	void tryToAttack() {
+	public void tryToAttack() {
 		if (attackTimer >= cooldown) {
 			attackTimer = 0.0f;
 			StartCoroutine(attack());
