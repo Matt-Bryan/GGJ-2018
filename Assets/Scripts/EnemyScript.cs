@@ -19,8 +19,6 @@ public class EnemyScript : MonoBehaviour {
 		Vector2 playerPosition = player.transform.position;
 
 		RaycastHit2D hit = Physics2D.Raycast(selfPosition, playerPosition - selfPosition);
-		Debug.Log("Collider: " + hit.collider + "\nTag: " + hit.collider.gameObject.tag);
-		Debug.DrawLine(selfPosition, playerPosition);
 
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
 			transform.position = Vector2.MoveTowards(transform.position,
