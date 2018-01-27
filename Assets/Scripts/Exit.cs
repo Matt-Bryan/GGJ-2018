@@ -5,11 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour {
 
-	public string nextLevel = "TestingJohn1";
+	public string nextLevel;
 
 	void OnTriggerEnter2D(Collider2D other) {
-		SceneManager.LoadScene (nextLevel);
-		Debug.Log ("Next Level");
+		switch(other.gameObject.tag){
+		case "Player":
+			SceneManager.LoadScene (nextLevel);
+			Debug.Log ("Next Level");
+			break;
+		case "Controllable":
+			break;
+		case "Arrow_Flying":
+			break;
+		default:
+			Debug.LogError ("Setup spikes for this object! " + other.gameObject);
+			break;
+		}
 	}
 
 }
