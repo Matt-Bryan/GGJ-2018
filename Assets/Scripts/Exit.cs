@@ -10,8 +10,7 @@ public class Exit : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 		case "Player":
-			SceneManager.LoadScene (nextLevel);
-			Debug.Log ("Next Level");
+			other.gameObject.transform.GetComponent<PlayerScript> ().NextLevel ();
 			break;
 		case "Controllable":
 			break;

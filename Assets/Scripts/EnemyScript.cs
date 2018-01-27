@@ -16,13 +16,23 @@ public class EnemyScript : MonoBehaviour {
 	private bool left = true;
 	private bool patrol = true;
 
+	/*An enemy can only be either projectile or aoe, not both.  If both scripts are set, 
+	 * then projectiile takes precedence*/
+
+	public projectileAttack projAtk;
+	private bool isProjAtk = false;
+
 	public aoeAttack aoe;
 	private bool isAoe = false;
+
 
 	// Use this for initialization
 	void Start () {
 
-		if(aoe != null){
+		if(projAtk != null){
+			isProjAtk = true;
+		}
+		else if(aoe != null){
 			isAoe = true;
 		}
 
@@ -41,8 +51,11 @@ public class EnemyScript : MonoBehaviour {
 			float enemyToPlayerDist =
 				Mathf.Abs(Vector2.Distance(selfPosition, playerPosition));
 			if (enemyToPlayerDist < detectDistance) {
-				if(isAoe){
-					Debug.Log (aoe);
+				if(isProjAtk){
+					projAtk.tryToAttack (hit.collider.gameObject);
+				}
+				else if(isAoe){
+					//Debug.Log (aoe);
 					aoe.tryToAttack ();
 				}
 				else{

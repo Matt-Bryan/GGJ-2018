@@ -10,8 +10,9 @@ public class Spikes : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		switch(other.gameObject.tag){
 		case "Player":
-			SceneManager.LoadScene (thisLevel);
-			Debug.Log ("Died");
+			//SceneManager.LoadScene (thisLevel);
+			//Debug.Log ("Died");
+			other.gameObject.transform.GetComponent<PlayerScript> ().Die ();
 			break;
 		case "Controllable":
 			GameObject.Destroy (other.gameObject);
