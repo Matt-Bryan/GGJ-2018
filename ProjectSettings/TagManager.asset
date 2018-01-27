@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
   - Controllable
+  - Ground
+  - Arrow_Flying
   layers:
   - Default
   - TransparentFX
