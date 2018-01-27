@@ -11,16 +11,19 @@ public class aoeAttack : MonoBehaviour {
 
 	private GameObject[] instantiatedObjects = new GameObject[8];
 	private float attackTimer = 3.0f;
-	private bool isAttacking = false;
-
-	void Start() {
-		aoePrefab.transform.localScale = new Vector3 (0.05f, 0.05f, 1f);
-	}
 
 	void Update() {
 		attackTimer += Time.deltaTime;
-		if (Input.GetMouseButtonDown(0) && attackTimer >= cooldown && !isAttacking) {
-			isAttacking = true;
+
+		// For debug testing
+		// if (Input.GetMouseButtonDown(0)) {
+		// 	tryToAttack();
+		// }
+	}
+
+	void tryToAttack() {
+		if (attackTimer >= cooldown) {
+			attackTimer = 0.0f;
 			StartCoroutine(attack());
 		}
 	}
@@ -36,7 +39,5 @@ public class aoeAttack : MonoBehaviour {
 		for (int count = 0; count < 8; count++) {
 			Destroy(instantiatedObjects[count]);
 		}
-		attackTimer = 0.0f;
-		isAttacking = false;
 	}
 }
