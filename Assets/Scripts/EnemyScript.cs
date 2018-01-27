@@ -69,10 +69,10 @@ public class EnemyScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		Debug.Log ("Enemy Collided");
+		//Debug.Log ("Enemy Collided");
 		if(col.gameObject.tag == "Controllable"){
 			towardPt1 = !towardPt1;
-			Debug.Log ("Bounce on Enemy");
+			//Debug.Log ("Bounce on Enemy");
 		}
 	}
 
