@@ -10,7 +10,7 @@ public class LoadSceneOnClick : MonoBehaviour {
             Application.Quit();
         }
         else {
-            SceneManager.LoadScene(levelName);
+			UnityEngine.SceneManagement.SceneManager.LoadScene (levelName);
         }
     }
 }
