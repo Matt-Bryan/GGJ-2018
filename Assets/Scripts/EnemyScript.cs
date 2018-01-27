@@ -61,6 +61,9 @@ public class EnemyScript : MonoBehaviour {
 					player.transform.position, enemySpeed);
 				}
 			}
+			else{
+				patrol = true;
+			}
 		}
 		else{
 			patrol = true;
