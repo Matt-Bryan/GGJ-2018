@@ -12,12 +12,12 @@ public class PlayerScript : MonoBehaviour {
 	private bool isGrounded = true;
 	private bool isFacingRight = true;
 	private Rigidbody2D rb2d;
-	private Animator anim;
+	//private Animator anim;
 
 	// Use this for initialization
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+		//anim = GetComponent<Animator>();
 	}
 
 	// FixedUpdate is called once per frame
@@ -35,10 +35,10 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (x != 0) {
-			anim.Play("PlayerWalking");
+			//anim.Play("PlayerWalking");
 		}
 		else {
-			anim.Play("PlayerIdle");
+			//anim.Play("PlayerIdle");
 		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
@@ -57,8 +57,8 @@ public class PlayerScript : MonoBehaviour {
 		isFacingRight = !isFacingRight;
 
 		// Multiply the player's x local scale by -1
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		//Vector3 theScale = transform.localScale;
+		//theScale.x *= -1;
+		//transform.localScale = theScale;
 	}
 }
