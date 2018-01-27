@@ -95,10 +95,10 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	public void Die(){
-		SceneManager.LoadScene (thisLevel);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (thisLevel);
 	}
 
 	public void NextLevel(){
-		SceneManager.LoadScene (nextLevel);
+		UnityEngine.SceneManagement.SceneManager.LoadScene (nextLevel);
 	}
 }

@@ -4,11 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-<<<<<<< HEAD
-  productGUID: b498177b1d650bd41b7c1cebd05833cc
-=======
-  productGUID: 1837dbec73d79fc45b4bf5b435cd6ceb
->>>>>>> 44ea1f63679a7bef5780a502407fb92e0a2c1c48
+  productGUID: e64c24d40548f0a4db67c7e78279deaf
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -16,11 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-<<<<<<< HEAD
-  productName: GGJ18
-=======
   productName: GGJ-2018
->>>>>>> 44ea1f63679a7bef5780a502407fb92e0a2c1c48
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -465,7 +457,7 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
-  ps4Passcode: eaoEiIgxIX4a2dREbbSqWy6yhKIDCdJO
+  ps4Passcode: 1O8YFOGKjxRrJBdT3hVOfoaMeAjSWfch
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -511,7 +503,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: yapnxrpMCARCr4zdGc81tBDKsMlaZTXC
+  psp2PackagePassword: oZYFYZ5B6kzMCk8R6BEuZMrF6cI6NX8D
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
@@ -566,22 +558,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-<<<<<<< HEAD
-  metroPackageName: GGJ18
-=======
   metroPackageName: GGJ-2018
->>>>>>> 44ea1f63679a7bef5780a502407fb92e0a2c1c48
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-<<<<<<< HEAD
-  metroApplicationDescription: GGJ18
-=======
   metroApplicationDescription: GGJ-2018
->>>>>>> 44ea1f63679a7bef5780a502407fb92e0a2c1c48
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
