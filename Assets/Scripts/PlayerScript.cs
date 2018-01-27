@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
 	void FixedUpdate() {
 		float x = Input.GetAxis("Horizontal");
 
-		/*if (x < 0f && isFacingRight) {
+		if (x < 0f && isFacingRight) {
 			//If we're moving right but not facing right, flip the sprite and set facingRight to true.
 			Flip();
 			isFacingRight = false;
@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		else {
 			//anim.Play("PlayerIdle");
-		}*/
+		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
 		if (isGrounded && Input.GetButtonDown("Jump")) {
@@ -57,8 +57,8 @@ public class PlayerScript : MonoBehaviour {
 		isFacingRight = !isFacingRight;
 
 		// Multiply the player's x local scale by -1
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-		transform.localScale = theScale;
+		//Vector3 theScale = transform.localScale;
+		//theScale.x *= -1;
+		//transform.localScale = theScale;
 	}
 }
