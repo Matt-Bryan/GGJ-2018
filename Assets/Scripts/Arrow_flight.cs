@@ -9,9 +9,11 @@ public class Arrow_flight : MonoBehaviour {
 	public int arrowSpeed;
 	public GameObject arrowAiming;
 	Rigidbody2D arrowRigidbody;
+	private GameObject playerCamera;
 
 	// Use this for initialization
 	void Start () {
+		playerCamera = GameObject.Find ("Main Camera");
 		arrowRigidbody = GetComponent<Rigidbody2D> ();
 		is_returning = false;
 		arrowRigidbody.velocity = transform.right * arrowSpeed;
@@ -20,26 +22,31 @@ public class Arrow_flight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 		if (is_returning && prevBody != null)
 			arrowRigidbody.velocity = (prevBody.transform.position - transform.position) * 3;
-
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
-		if (col.gameObject.tag == "Controllable" && (!col.gameObject.Equals(prevBody) || is_returning) )
+		if (col.gameObject.tag == "Controllable" && (is_returning || !col.gameObject.Equals(prevBody)))
 			takeControl (col.gameObject);
 		else if (col.gameObject.tag == "Ground")
 			arrowReturn ();		
 	}
 
+	void OnTriggerStay2D(Collider2D col){
+		if ((col.gameObject == prevBody) && is_returning)
+			takeControl (col.gameObject);
+	}
+
 	void takeControl(GameObject newBody){
-		prevBody.tag = "Controllable";
+		Debug.Log (is_returning);
+		Debug.Log ("taking control");
 		newBody.GetComponent<PlayerScript> ().enabled = true;
-		newBody.GetComponent<EnemyScript> ().enabled = false;
+		newBody.GetComponent<EnemyScript> ().enabled = true;
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
-		GameObject.Find ("Main Camera").transform.SetParent (newBody.transform);
+		playerCamera.transform.SetParent (newBody.transform);
+		playerCamera.transform.localPosition = new Vector3 (0.0f, 0.0f, -10.0f);
 		Destroy (gameObject);
 	}
 
@@ -47,13 +54,9 @@ public class Arrow_flight : MonoBehaviour {
 		yield return new WaitForSeconds(flight_time);
 		arrowReturn ();
 	}
-
-	void SetPrevBody(GameObject oldBody){
-		prevBody = oldBody;
-		prevBody.gameObject.tag = "Controllable";
-	}
 		
 	void arrowReturn(){
+		Debug.Log ("is returning");
 		is_returning = true;
 	}
 }
