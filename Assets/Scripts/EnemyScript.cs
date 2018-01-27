@@ -15,9 +15,16 @@ public class EnemyScript : MonoBehaviour {
 	private bool towardPt1 = true;
 	private bool patrol = true;
 
+	public aoeAttack aoe;
+	private bool isAoe = false;
+
 	// Use this for initialization
 	void Start () {
-		
+
+		if(aoe != null){
+			isAoe = true;
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -30,13 +37,17 @@ public class EnemyScript : MonoBehaviour {
 
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
 			patrol = false;
-			transform.position = Vector2.MoveTowards(transform.position,
-				player.transform.position, enemySpeed);
 			float enemyToPlayerDist =
 				Mathf.Abs(Vector2.Distance(selfPosition, playerPosition));
 			if (enemyToPlayerDist < detectDistance) {
+				if(isAoe){
+					Debug.Log (aoe);
+					aoe.tryToAttack ();
+				}
+				else{
 				transform.position = Vector2.MoveTowards(transform.position,
 					player.transform.position, enemySpeed);
+				}
 			}
 		}
 		else{

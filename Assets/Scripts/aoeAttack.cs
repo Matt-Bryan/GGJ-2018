@@ -11,8 +11,10 @@ public class aoeAttack : MonoBehaviour {
 	public float projSpeed;			// How fast the projectiles will move (150 is pretty good)
 	public float projDestroTime;	// How soon the projectile will be destroyed after firing
 	public float cooldown;			// How long until the aoe can be shot again
+	public int numProjectiles;      // The number of projectiles to be fired
 
-	private GameObject[] instantiatedObjects = new GameObject[8];
+	private List<GameObject> instantiatedObjects = new List<GameObject>(0);
+	//private GameObject[] instantiatedObjects = new GameObject[8];
 	private float attackTimer = 3.0f;
 
 	void Update() {
@@ -32,15 +34,27 @@ public class aoeAttack : MonoBehaviour {
 	}
 
 	IEnumerator attack() {
-		for (int count = 0; count < 8; count++) {
-			instantiatedObjects[count] = Instantiate(aoePrefab, transform.position, Quaternion.identity);
+		for (int count = 0; count < numProjectiles; count++) {
+			Debug.Log (instantiatedObjects.Count);
+			instantiatedObjects.Add (Instantiate (aoePrefab, transform.position, Quaternion.identity));
 			Vector3 forceVector = new Vector3(Mathf.Cos(count * 15), Mathf.Sin(count * 15), 0);
-			Rigidbody2D shotRb = instantiatedObjects[count].GetComponent<Rigidbody2D>();
+			Rigidbody2D shotRb = instantiatedObjects[instantiatedObjects.Count-1].GetComponent<Rigidbody2D>();
 			shotRb.AddForce (forceVector.normalized * projSpeed);
 		}
 		yield return new WaitForSeconds(projDestroTime);
-		for (int count = 0; count < 8; count++) {
-			Destroy(instantiatedObjects[count]);
+
+		for (int count = 0; count < numProjectiles; count++) {
+			if(instantiatedObjects.Count == 0){
+				break;
+			}
+			GameObject temp = instantiatedObjects [0];
+			instantiatedObjects.Remove (instantiatedObjects[0]);
+			if(temp != null){
+				GameObject.Destroy(temp);
+
+			}
 		}
+		instantiatedObjects.Clear ();
+		Debug.Log ("Should be empty" + instantiatedObjects.Count);
 	}
 }
