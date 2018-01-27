@@ -15,7 +15,6 @@ public class Arrow_aim : MonoBehaviour {
 	void Start () {
 		arrowTransform = GetComponent<Transform> ();
 		playerCamera = GameObject.Find ("Main Camera");
-		//arrowTransform.rotation.Set (0.0f, 0.0f, 90.0f, 0.0f);
 	}
 	
 	// Update is called once per frame
@@ -32,9 +31,10 @@ public class Arrow_aim : MonoBehaviour {
 
 	void Shoot(){
 		GameObject projectile = (GameObject)Instantiate (arrowProjectile, transform.position, transform.rotation);
-		projectile.GetComponent<Arrow_flight> ().SendMessage ("SetPrevBody", transform.parent.gameObject);
+		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
 		playerCamera.transform.SetParent (projectile.transform);
 		GetComponentInParent<PlayerScript> ().enabled = false;
+		GetComponentInParent<EnemyScript> ().enabled = true;
 		Destroy (arrowTransform.gameObject);
 	}
 }

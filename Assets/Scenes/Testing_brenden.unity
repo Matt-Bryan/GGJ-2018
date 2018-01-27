@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 728314726}
   - component: {fileID: 728314725}
   - component: {fileID: 728314724}
+  - component: {fileID: 728314728}
   - component: {fileID: 728314723}
   - component: {fileID: 728314727}
   m_Layer: 0
@@ -939,6 +940,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   jumpSpeed: 10
+  thisLevel: 
+--- !u!114 &728314728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728314722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb6ca189742a3548945c6b6691e84d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 0
+  detectDistance: 3
+  player: {fileID: 0}
+  patrolPt1: {x: 0, y: 0}
+  patrolPt2: {x: 0, y: 0}
+  aoe: {fileID: 0}
 --- !u!1001 &805167888
 Prefab:
   m_ObjectHideFlags: 0
@@ -1354,6 +1373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703253813}
   - component: {fileID: 1703253812}
+  - component: {fileID: 1703253815}
   - component: {fileID: 1703253811}
   - component: {fileID: 1703253810}
   - component: {fileID: 1703253809}
@@ -1378,6 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   jumpSpeed: 10
+  thisLevel: 
 --- !u!61 &1703253810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1491,11 +1512,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7ff91e726a0ed4ead1f25b655af549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1703253815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1703253808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb6ca189742a3548945c6b6691e84d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   enemySpeed: 0
-  detectDistance: 1
+  detectDistance: 3
   player: {fileID: 0}
   patrolPt1: {x: 0, y: 0}
   patrolPt2: {x: 0, y: 0}
+  aoe: {fileID: 0}
 --- !u!4 &1741382749 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4174605112102428, guid: 61502c3af235d1f48ab51b88fa3cf2a2,
