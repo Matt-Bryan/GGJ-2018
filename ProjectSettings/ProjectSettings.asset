@@ -634,9 +634,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: d506836d-68ae-447d-8801-09ea911aa064
+  cloudProjectId: bf259496-2e45-442d-8ce4-ebeffee4c24e
   projectName: GGJ18
-  organizationId: jthpotz-gmail-com
+  organizationId: thelazyengineer
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
