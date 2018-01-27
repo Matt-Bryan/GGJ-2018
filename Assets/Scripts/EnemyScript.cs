@@ -12,7 +12,8 @@ public class EnemyScript : MonoBehaviour {
 	public Vector2 patrolPt1;
 	public Vector2 patrolPt2;
 
-	private bool towardPt1 = true;
+	//private bool towardPt1 = true;
+	private bool left = true;
 	private bool patrol = true;
 
 	public aoeAttack aoe;
@@ -54,26 +55,33 @@ public class EnemyScript : MonoBehaviour {
 			patrol = true;
 		}
 
-		if((Vector2)transform.position == patrolPt1 || (Vector2)transform.position == patrolPt2){
-			towardPt1 = !towardPt1;
-		}
+//		if((Vector2)transform.position == patrolPt1 || (Vector2)transform.position == patrolPt2){
+//			towardPt1 = !towardPt1;
+//		}
 
 		if(patrol){
-			if(towardPt1){
-				transform.position = Vector2.MoveTowards (transform.position, patrolPt1, enemySpeed);
+			if(left){
+				transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x-1, transform.position.y), enemySpeed);
 			}
 			else{
-				transform.position = Vector2.MoveTowards (transform.position, patrolPt2, enemySpeed);
+				transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x+1, transform.position.y), enemySpeed);
 			}
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
 		//Debug.Log ("Enemy Collided");
-		if(col.gameObject.tag == "Controllable"){
-			towardPt1 = !towardPt1;
+		if(enabled == true && patrol && col.gameObject.tag == "Controllable"){
+			left = !left;
 			//Debug.Log ("Bounce on Enemy");
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D col){
+		if(enabled = true && patrol && col.gameObject.tag == "TurnPoint"){
+			left = !left;
+		}
+
 	}
 
 }

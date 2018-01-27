@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Arrow_Flying
   - Projectile
+  - TurnPoint
   layers:
   - Default
   - TransparentFX
