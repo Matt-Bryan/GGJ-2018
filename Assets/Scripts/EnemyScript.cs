@@ -45,7 +45,8 @@ public class EnemyScript : MonoBehaviour {
 
 		RaycastHit2D hit = Physics2D.Raycast(selfPosition,
 			playerPosition - selfPosition);
-
+		Debug.DrawRay (selfPosition, playerPosition - selfPosition);
+		//Debug.Log (Mathf.Sqrt ());
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
 			patrol = false;
 			float enemyToPlayerDist =
@@ -91,7 +92,7 @@ public class EnemyScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(enabled = true && patrol && col.gameObject.tag == "TurnPoint"){
+		if(enabled == true && patrol && col.gameObject.tag == "TurnPoint"){
 			left = !left;
 		}
 
