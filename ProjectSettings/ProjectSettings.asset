@@ -4,11 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-<<<<<<< HEAD
-  productGUID: 33aad30eb5a757548b8ba7ac86f15abc
-=======
-  productGUID: 5b11457acb3cd524499717099a325e78
->>>>>>> 2892a84990d73485eb89d65b4eb45d93469369aa
+  productGUID: 1837dbec73d79fc45b4bf5b435cd6ceb
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -16,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: GGJ2018
+  productName: GGJ-2018
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -562,14 +558,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: GGJ2018
+  metroPackageName: GGJ-2018
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: GGJ2018
+  metroApplicationDescription: GGJ-2018
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -635,11 +631,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled: {}
-<<<<<<< HEAD
-  facebookSdkVersion: 7.9.4
-=======
   facebookSdkVersion: 
->>>>>>> 2892a84990d73485eb89d65b4eb45d93469369aa
   apiCompatibilityLevel: 2
   cloudProjectId: 
   projectName: 

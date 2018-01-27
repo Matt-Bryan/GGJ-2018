@@ -42,6 +42,7 @@ public class Arrow_flight : MonoBehaviour {
 		Debug.Log (is_returning);
 		Debug.Log ("taking control");
 		newBody.GetComponent<PlayerScript> ().enabled = true;
+		newBody.GetComponent<EnemyScript> ().enabled = true;
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
