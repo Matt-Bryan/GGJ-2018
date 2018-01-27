@@ -1,9 +1,818 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: cd8fe0db70e1048429fa7d028efe3526
+timeCreated: 1517079148
+=======
 guid: 03a0b3defd8400a43b555ebd4aee5f75
 timeCreated: 1517077188
+>>>>>>> 4a75993cf35717542a3d7616bcabf25d21f57897
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Walking player_0
+    21300002: Walking player_1
+    21300004: Walking player_2
+    21300006: Walking player_3
+    21300008: Walking player_4
+    21300010: Walking player_5
+    21300012: Walking player_6
+    21300014: Walking player_7
+    21300016: Walking player_8
+    21300018: Walking player_9
+    21300020: Walking player_10
+    21300022: Walking player_11
+    21300024: Walking player_12
+    21300026: Walking player_13
+    21300028: Walking player_14
+    21300030: Walking player_15
+    21300032: Walking player_16
+    21300034: Walking player_17
+    21300036: Walking player_18
+    21300038: Walking player_19
+    21300040: Walking player_20
+    21300042: Walking player_21
+    21300044: Walking player_22
+    21300046: Walking player_23
+    21300048: Walking player_24
+    21300050: Walking player_25
+    21300052: Walking player_26
+    21300054: Walking player_27
+    21300056: Walking player_28
+    21300058: Walking player_29
+    21300060: Walking player_30
+    21300062: Walking player_31
+    21300064: Walking player_32
+    21300066: Walking player_33
+    21300068: Walking player_34
+    21300070: Walking player_35
+    21300072: Walking player_36
+    21300074: Walking player_37
+    21300076: Walking player_38
+    21300078: Walking player_39
+    21300080: Walking player_40
+    21300082: Walking player_41
+    21300084: Walking player_42
+    21300086: Walking player_43
+    21300088: Walking player_44
+    21300090: Walking player_45
+    21300092: Walking player_46
+    21300094: Walking player_47
+    21300096: Walking player_48
+    21300098: Walking player_49
+    21300100: Walking player_50
+    21300102: Walking player_51
+    21300104: Walking player_52
+    21300106: Walking player_53
+    21300108: Walking player_54
+    21300110: Walking player_55
+    21300112: Walking player_56
+    21300114: Walking player_57
+    21300116: Walking player_58
+    21300118: Walking player_59
+    21300120: Walking player_60
+    21300122: Walking player_61
+    21300124: Walking player_62
+    21300126: Walking player_63
+    21300128: Walking player_64
+    21300130: Walking player_65
+    21300132: Walking player_66
+    21300134: Walking player_67
+    21300136: Walking player_68
+    21300138: Walking player_69
+    21300140: Walking player_70
+    21300142: Walking player_71
+    21300144: Walking player_72
+    21300146: Walking player_73
+    21300148: Walking player_74
+    21300150: Walking player_75
+    21300152: Walking player_76
+    21300154: Walking player_77
+    21300156: Walking player_78
+    21300158: Walking player_79
+    21300160: Walking player_80
+    21300162: Walking player_81
+    21300164: Walking player_82
+    21300166: Walking player_83
+    21300168: Walking player_84
+    21300170: Walking player_85
+    21300172: Walking player_86
+    21300174: Walking player_87
+    21300176: Walking player_88
+    21300178: Walking player_89
+    21300180: Walking player_90
+    21300182: Walking player_91
+    21300184: Walking player_92
+    21300186: Walking player_93
+    21300188: Walking player_94
+    21300190: Walking player_95
+    21300192: Walking player_96
+    21300194: Walking player_97
+    21300196: Walking player_98
+    21300198: Walking player_99
+    21300200: Walking player_100
+    21300202: Walking player_101
+    21300204: Walking player_102
+    21300206: Walking player_103
+    21300208: Walking player_104
+    21300210: Walking player_105
+    21300212: Walking player_106
+    21300214: Walking player_107
+    21300216: Walking player_108
+    21300218: Walking player_109
+    21300220: Walking player_110
+    21300222: Walking player_111
+    21300224: Walking player_112
+    21300226: Walking player_113
+    21300228: Walking player_114
+    21300230: Walking player_115
+    21300232: Walking player_116
+    21300234: Walking player_117
+    21300236: Walking player_118
+    21300238: Walking player_119
+    21300240: Walking player_120
+    21300242: Walking player_121
+    21300244: Walking player_122
+    21300246: Walking player_123
+    21300248: Walking player_124
+    21300250: Walking player_125
+    21300252: Walking player_126
+    21300254: Walking player_127
+    21300256: Walking player_128
+    21300258: Walking player_129
+    21300260: Walking player_130
+    21300262: Walking player_131
+    21300264: Walking player_132
+    21300266: Walking player_133
+    21300268: Walking player_134
+    21300270: Walking player_135
+    21300272: Walking player_136
+    21300274: Walking player_137
+    21300276: Walking player_138
+    21300278: Walking player_139
+    21300280: Walking player_140
+    21300282: Walking player_141
+    21300284: Walking player_142
+    21300286: Walking player_143
+    21300288: Walking player_144
+    21300290: Walking player_145
+    21300292: Walking player_146
+    21300294: Walking player_147
+    21300296: Walking player_148
+    21300298: Walking player_149
+    21300300: Walking player_150
+    21300302: Walking player_151
+    21300304: Walking player_152
+    21300306: Walking player_153
+    21300308: Walking player_154
+    21300310: Walking player_155
+    21300312: Walking player_156
+    21300314: Walking player_157
+    21300316: Walking player_158
+    21300318: Walking player_159
+    21300320: Walking player_160
+    21300322: Walking player_161
+    21300324: Walking player_162
+    21300326: Walking player_163
+    21300328: Walking player_164
+    21300330: Walking player_165
+    21300332: Walking player_166
+    21300334: Walking player_167
+    21300336: Walking player_168
+    21300338: Walking player_169
+    21300340: Walking player_170
+    21300342: Walking player_171
+    21300344: Walking player_172
+    21300346: Walking player_173
+    21300348: Walking player_174
+    21300350: Walking player_175
+    21300352: Walking player_176
+    21300354: Walking player_177
+    21300356: Walking player_178
+    21300358: Walking player_179
+    21300360: Walking player_180
+    21300362: Walking player_181
+    21300364: Walking player_182
+    21300366: Walking player_183
+    21300368: Walking player_184
+    21300370: Walking player_185
+    21300372: Walking player_186
+    21300374: Walking player_187
+    21300376: Walking player_188
+    21300378: Walking player_189
+    21300380: Walking player_190
+    21300382: Walking player_191
+    21300384: Walking player_192
+    21300386: Walking player_193
+    21300388: Walking player_194
+    21300390: Walking player_195
+    21300392: Walking player_196
+    21300394: Walking player_197
+    21300396: Walking player_198
+    21300398: Walking player_199
+    21300400: Walking player_200
+    21300402: Walking player_201
+    21300404: Walking player_202
+    21300406: Walking player_203
+    21300408: Walking player_204
+    21300410: Walking player_205
+    21300412: Walking player_206
+    21300414: Walking player_207
+    21300416: Walking player_208
+    21300418: Walking player_209
+    21300420: Walking player_210
+    21300422: Walking player_211
+    21300424: Walking player_212
+    21300426: Walking player_213
+    21300428: Walking player_214
+    21300430: Walking player_215
+    21300432: Walking player_216
+    21300434: Walking player_217
+    21300436: Walking player_218
+    21300438: Walking player_219
+    21300440: Walking player_220
+    21300442: Walking player_221
+    21300444: Walking player_222
+    21300446: Walking player_223
+    21300448: Walking player_224
+    21300450: Walking player_225
+    21300452: Walking player_226
+    21300454: Walking player_227
+    21300456: Walking player_228
+    21300458: Walking player_229
+    21300460: Walking player_230
+    21300462: Walking player_231
+    21300464: Walking player_232
+    21300466: Walking player_233
+    21300468: Walking player_234
+    21300470: Walking player_235
+    21300472: Walking player_236
+    21300474: Walking player_237
+    21300476: Walking player_238
+    21300478: Walking player_239
+    21300480: Walking player_240
+    21300482: Walking player_241
+    21300484: Walking player_242
+    21300486: Walking player_243
+    21300488: Walking player_244
+    21300490: Walking player_245
+    21300492: Walking player_246
+    21300494: Walking player_247
+    21300496: Walking player_248
+    21300498: Walking player_249
+    21300500: Walking player_250
+    21300502: Walking player_251
+    21300504: Walking player_252
+    21300506: Walking player_253
+    21300508: Walking player_254
+    21300510: Walking player_255
+    21300512: Walking player_256
+    21300514: Walking player_257
+    21300516: Walking player_258
+    21300518: Walking player_259
+    21300520: Walking player_260
+    21300522: Walking player_261
+    21300524: Walking player_262
+    21300526: Walking player_263
+    21300528: Walking player_264
+    21300530: Walking player_265
+    21300532: Walking player_266
+    21300534: Walking player_267
+    21300536: Walking player_268
+    21300538: Walking player_269
+    21300540: Walking player_270
+    21300542: Walking player_271
+    21300544: Walking player_272
+    21300546: Walking player_273
+    21300548: Walking player_274
+    21300550: Walking player_275
+    21300552: Walking player_276
+    21300554: Walking player_277
+    21300556: Walking player_278
+    21300558: Walking player_279
+    21300560: Walking player_280
+    21300562: Walking player_281
+    21300564: Walking player_282
+    21300566: Walking player_283
+    21300568: Walking player_284
+    21300570: Walking player_285
+    21300572: Walking player_286
+    21300574: Walking player_287
+    21300576: Walking player_288
+    21300578: Walking player_289
+    21300580: Walking player_290
+    21300582: Walking player_291
+    21300584: Walking player_292
+    21300586: Walking player_293
+    21300588: Walking player_294
+    21300590: Walking player_295
+    21300592: Walking player_296
+    21300594: Walking player_297
+    21300596: Walking player_298
+    21300598: Walking player_299
+    21300600: Walking player_300
+    21300602: Walking player_301
+    21300604: Walking player_302
+    21300606: Walking player_303
+    21300608: Walking player_304
+    21300610: Walking player_305
+    21300612: Walking player_306
+    21300614: Walking player_307
+    21300616: Walking player_308
+    21300618: Walking player_309
+    21300620: Walking player_310
+    21300622: Walking player_311
+    21300624: Walking player_312
+    21300626: Walking player_313
+    21300628: Walking player_314
+    21300630: Walking player_315
+    21300632: Walking player_316
+    21300634: Walking player_317
+    21300636: Walking player_318
+    21300638: Walking player_319
+    21300640: Walking player_320
+    21300642: Walking player_321
+    21300644: Walking player_322
+    21300646: Walking player_323
+    21300648: Walking player_324
+    21300650: Walking player_325
+    21300652: Walking player_326
+    21300654: Walking player_327
+    21300656: Walking player_328
+    21300658: Walking player_329
+    21300660: Walking player_330
+    21300662: Walking player_331
+    21300664: Walking player_332
+    21300666: Walking player_333
+    21300668: Walking player_334
+    21300670: Walking player_335
+    21300672: Walking player_336
+    21300674: Walking player_337
+    21300676: Walking player_338
+    21300678: Walking player_339
+    21300680: Walking player_340
+    21300682: Walking player_341
+    21300684: Walking player_342
+    21300686: Walking player_343
+    21300688: Walking player_344
+    21300690: Walking player_345
+    21300692: Walking player_346
+    21300694: Walking player_347
+    21300696: Walking player_348
+    21300698: Walking player_349
+    21300700: Walking player_350
+    21300702: Walking player_351
+    21300704: Walking player_352
+    21300706: Walking player_353
+    21300708: Walking player_354
+    21300710: Walking player_355
+    21300712: Walking player_356
+    21300714: Walking player_357
+    21300716: Walking player_358
+    21300718: Walking player_359
+    21300720: Walking player_360
+    21300722: Walking player_361
+    21300724: Walking player_362
+    21300726: Walking player_363
+    21300728: Walking player_364
+    21300730: Walking player_365
+    21300732: Walking player_366
+    21300734: Walking player_367
+    21300736: Walking player_368
+    21300738: Walking player_369
+    21300740: Walking player_370
+    21300742: Walking player_371
+    21300744: Walking player_372
+    21300746: Walking player_373
+    21300748: Walking player_374
+    21300750: Walking player_375
+    21300752: Walking player_376
+    21300754: Walking player_377
+    21300756: Walking player_378
+    21300758: Walking player_379
+    21300760: Walking player_380
+    21300762: Walking player_381
+    21300764: Walking player_382
+    21300766: Walking player_383
+    21300768: Walking player_384
+    21300770: Walking player_385
+    21300772: Walking player_386
+    21300774: Walking player_387
+    21300776: Walking player_388
+    21300778: Walking player_389
+    21300780: Walking player_390
+    21300782: Walking player_391
+    21300784: Walking player_392
+    21300786: Walking player_393
+    21300788: Walking player_394
+    21300790: Walking player_395
+    21300792: Walking player_396
+    21300794: Walking player_397
+    21300796: Walking player_398
+    21300798: Walking player_399
+    21300800: Walking player_400
+    21300802: Walking player_401
+    21300804: Walking player_402
+    21300806: Walking player_403
+    21300808: Walking player_404
+    21300810: Walking player_405
+    21300812: Walking player_406
+    21300814: Walking player_407
+    21300816: Walking player_408
+    21300818: Walking player_409
+    21300820: Walking player_410
+    21300822: Walking player_411
+    21300824: Walking player_412
+    21300826: Walking player_413
+    21300828: Walking player_414
+    21300830: Walking player_415
+    21300832: Walking player_416
+    21300834: Walking player_417
+    21300836: Walking player_418
+    21300838: Walking player_419
+    21300840: Walking player_420
+    21300842: Walking player_421
+    21300844: Walking player_422
+    21300846: Walking player_423
+    21300848: Walking player_424
+    21300850: Walking player_425
+    21300852: Walking player_426
+    21300854: Walking player_427
+    21300856: Walking player_428
+    21300858: Walking player_429
+    21300860: Walking player_430
+    21300862: Walking player_431
+    21300864: Walking player_432
+    21300866: Walking player_433
+    21300868: Walking player_434
+    21300870: Walking player_435
+    21300872: Walking player_436
+    21300874: Walking player_437
+    21300876: Walking player_438
+    21300878: Walking player_439
+    21300880: Walking player_440
+    21300882: Walking player_441
+    21300884: Walking player_442
+    21300886: Walking player_443
+    21300888: Walking player_444
+    21300890: Walking player_445
+    21300892: Walking player_446
+    21300894: Walking player_447
+    21300896: Walking player_448
+    21300898: Walking player_449
+    21300900: Walking player_450
+    21300902: Walking player_451
+    21300904: Walking player_452
+    21300906: Walking player_453
+    21300908: Walking player_454
+    21300910: Walking player_455
+    21300912: Walking player_456
+    21300914: Walking player_457
+    21300916: Walking player_458
+    21300918: Walking player_459
+    21300920: Walking player_460
+    21300922: Walking player_461
+    21300924: Walking player_462
+    21300926: Walking player_463
+    21300928: Walking player_464
+    21300930: Walking player_465
+    21300932: Walking player_466
+    21300934: Walking player_467
+    21300936: Walking player_468
+    21300938: Walking player_469
+    21300940: Walking player_470
+    21300942: Walking player_471
+    21300944: Walking player_472
+    21300946: Walking player_473
+    21300948: Walking player_474
+    21300950: Walking player_475
+    21300952: Walking player_476
+    21300954: Walking player_477
+    21300956: Walking player_478
+    21300958: Walking player_479
+    21300960: Walking player_480
+    21300962: Walking player_481
+    21300964: Walking player_482
+    21300966: Walking player_483
+    21300968: Walking player_484
+    21300970: Walking player_485
+    21300972: Walking player_486
+    21300974: Walking player_487
+    21300976: Walking player_488
+    21300978: Walking player_489
+    21300980: Walking player_490
+    21300982: Walking player_491
+    21300984: Walking player_492
+    21300986: Walking player_493
+    21300988: Walking player_494
+    21300990: Walking player_495
+    21300992: Walking player_496
+    21300994: Walking player_497
+    21300996: Walking player_498
+    21300998: Walking player_499
+    21301000: Walking player_500
+    21301002: Walking player_501
+    21301004: Walking player_502
+    21301006: Walking player_503
+    21301008: Walking player_504
+    21301010: Walking player_505
+    21301012: Walking player_506
+    21301014: Walking player_507
+    21301016: Walking player_508
+    21301018: Walking player_509
+    21301020: Walking player_510
+    21301022: Walking player_511
+    21301024: Walking player_512
+    21301026: Walking player_513
+    21301028: Walking player_514
+    21301030: Walking player_515
+    21301032: Walking player_516
+    21301034: Walking player_517
+    21301036: Walking player_518
+    21301038: Walking player_519
+    21301040: Walking player_520
+    21301042: Walking player_521
+    21301044: Walking player_522
+    21301046: Walking player_523
+    21301048: Walking player_524
+    21301050: Walking player_525
+    21301052: Walking player_526
+    21301054: Walking player_527
+    21301056: Walking player_528
+    21301058: Walking player_529
+    21301060: Walking player_530
+    21301062: Walking player_531
+    21301064: Walking player_532
+    21301066: Walking player_533
+    21301068: Walking player_534
+    21301070: Walking player_535
+    21301072: Walking player_536
+    21301074: Walking player_537
+    21301076: Walking player_538
+    21301078: Walking player_539
+    21301080: Walking player_540
+    21301082: Walking player_541
+    21301084: Walking player_542
+    21301086: Walking player_543
+    21301088: Walking player_544
+    21301090: Walking player_545
+    21301092: Walking player_546
+    21301094: Walking player_547
+    21301096: Walking player_548
+    21301098: Walking player_549
+    21301100: Walking player_550
+    21301102: Walking player_551
+    21301104: Walking player_552
+    21301106: Walking player_553
+    21301108: Walking player_554
+    21301110: Walking player_555
+    21301112: Walking player_556
+    21301114: Walking player_557
+    21301116: Walking player_558
+    21301118: Walking player_559
+    21301120: Walking player_560
+    21301122: Walking player_561
+    21301124: Walking player_562
+    21301126: Walking player_563
+    21301128: Walking player_564
+    21301130: Walking player_565
+    21301132: Walking player_566
+    21301134: Walking player_567
+    21301136: Walking player_568
+    21301138: Walking player_569
+    21301140: Walking player_570
+    21301142: Walking player_571
+    21301144: Walking player_572
+    21301146: Walking player_573
+    21301148: Walking player_574
+    21301150: Walking player_575
+    21301152: Walking player_576
+    21301154: Walking player_577
+    21301156: Walking player_578
+    21301158: Walking player_579
+    21301160: Walking player_580
+    21301162: Walking player_581
+    21301164: Walking player_582
+    21301166: Walking player_583
+    21301168: Walking player_584
+    21301170: Walking player_585
+    21301172: Walking player_586
+    21301174: Walking player_587
+    21301176: Walking player_588
+    21301178: Walking player_589
+    21301180: Walking player_590
+    21301182: Walking player_591
+    21301184: Walking player_592
+    21301186: Walking player_593
+    21301188: Walking player_594
+    21301190: Walking player_595
+    21301192: Walking player_596
+    21301194: Walking player_597
+    21301196: Walking player_598
+    21301198: Walking player_599
+    21301200: Walking player_600
+    21301202: Walking player_601
+    21301204: Walking player_602
+    21301206: Walking player_603
+    21301208: Walking player_604
+    21301210: Walking player_605
+    21301212: Walking player_606
+    21301214: Walking player_607
+    21301216: Walking player_608
+    21301218: Walking player_609
+    21301220: Walking player_610
+    21301222: Walking player_611
+    21301224: Walking player_612
+    21301226: Walking player_613
+    21301228: Walking player_614
+    21301230: Walking player_615
+    21301232: Walking player_616
+    21301234: Walking player_617
+    21301236: Walking player_618
+    21301238: Walking player_619
+    21301240: Walking player_620
+    21301242: Walking player_621
+    21301244: Walking player_622
+    21301246: Walking player_623
+    21301248: Walking player_624
+    21301250: Walking player_625
+    21301252: Walking player_626
+    21301254: Walking player_627
+    21301256: Walking player_628
+    21301258: Walking player_629
+    21301260: Walking player_630
+    21301262: Walking player_631
+    21301264: Walking player_632
+    21301266: Walking player_633
+    21301268: Walking player_634
+    21301270: Walking player_635
+    21301272: Walking player_636
+    21301274: Walking player_637
+    21301276: Walking player_638
+    21301278: Walking player_639
+    21301280: Walking player_640
+    21301282: Walking player_641
+    21301284: Walking player_642
+    21301286: Walking player_643
+    21301288: Walking player_644
+    21301290: Walking player_645
+    21301292: Walking player_646
+    21301294: Walking player_647
+    21301296: Walking player_648
+    21301298: Walking player_649
+    21301300: Walking player_650
+    21301302: Walking player_651
+    21301304: Walking player_652
+    21301306: Walking player_653
+    21301308: Walking player_654
+    21301310: Walking player_655
+    21301312: Walking player_656
+    21301314: Walking player_657
+    21301316: Walking player_658
+    21301318: Walking player_659
+    21301320: Walking player_660
+    21301322: Walking player_661
+    21301324: Walking player_662
+    21301326: Walking player_663
+    21301328: Walking player_664
+    21301330: Walking player_665
+    21301332: Walking player_666
+    21301334: Walking player_667
+    21301336: Walking player_668
+    21301338: Walking player_669
+    21301340: Walking player_670
+    21301342: Walking player_671
+    21301344: Walking player_672
+    21301346: Walking player_673
+    21301348: Walking player_674
+    21301350: Walking player_675
+    21301352: Walking player_676
+    21301354: Walking player_677
+    21301356: Walking player_678
+    21301358: Walking player_679
+    21301360: Walking player_680
+    21301362: Walking player_681
+    21301364: Walking player_682
+    21301366: Walking player_683
+    21301368: Walking player_684
+    21301370: Walking player_685
+    21301372: Walking player_686
+    21301374: Walking player_687
+    21301376: Walking player_688
+    21301378: Walking player_689
+    21301380: Walking player_690
+    21301382: Walking player_691
+    21301384: Walking player_692
+    21301386: Walking player_693
+    21301388: Walking player_694
+    21301390: Walking player_695
+    21301392: Walking player_696
+    21301394: Walking player_697
+    21301396: Walking player_698
+    21301398: Walking player_699
+    21301400: Walking player_700
+    21301402: Walking player_701
+    21301404: Walking player_702
+    21301406: Walking player_703
+    21301408: Walking player_704
+    21301410: Walking player_705
+    21301412: Walking player_706
+    21301414: Walking player_707
+    21301416: Walking player_708
+    21301418: Walking player_709
+    21301420: Walking player_710
+    21301422: Walking player_711
+    21301424: Walking player_712
+    21301426: Walking player_713
+    21301428: Walking player_714
+    21301430: Walking player_715
+    21301432: Walking player_716
+    21301434: Walking player_717
+    21301436: Walking player_718
+    21301438: Walking player_719
+    21301440: Walking player_720
+    21301442: Walking player_721
+    21301444: Walking player_722
+    21301446: Walking player_723
+    21301448: Walking player_724
+    21301450: Walking player_725
+    21301452: Walking player_726
+    21301454: Walking player_727
+    21301456: Walking player_728
+    21301458: Walking player_729
+    21301460: Walking player_730
+    21301462: Walking player_731
+    21301464: Walking player_732
+    21301466: Walking player_733
+    21301468: Walking player_734
+    21301470: Walking player_735
+    21301472: Walking player_736
+    21301474: Walking player_737
+    21301476: Walking player_738
+    21301478: Walking player_739
+    21301480: Walking player_740
+    21301482: Walking player_741
+    21301484: Walking player_742
+    21301486: Walking player_743
+    21301488: Walking player_744
+    21301490: Walking player_745
+    21301492: Walking player_746
+    21301494: Walking player_747
+    21301496: Walking player_748
+    21301498: Walking player_749
+    21301500: Walking player_750
+    21301502: Walking player_751
+    21301504: Walking player_752
+    21301506: Walking player_753
+    21301508: Walking player_754
+    21301510: Walking player_755
+    21301512: Walking player_756
+    21301514: Walking player_757
+    21301516: Walking player_758
+    21301518: Walking player_759
+    21301520: Walking player_760
+    21301522: Walking player_761
+    21301524: Walking player_762
+    21301526: Walking player_763
+    21301528: Walking player_764
+    21301530: Walking player_765
+    21301532: Walking player_766
+    21301534: Walking player_767
+    21301536: Walking player_768
+    21301538: Walking player_769
+    21301540: Walking player_770
+    21301542: Walking player_771
+    21301544: Walking player_772
+    21301546: Walking player_773
+    21301548: Walking player_774
+    21301550: Walking player_775
+    21301552: Walking player_776
+    21301554: Walking player_777
+    21301556: Walking player_778
+    21301558: Walking player_779
+    21301560: Walking player_780
+    21301562: Walking player_781
+    21301564: Walking player_782
+    21301566: Walking player_783
+    21301568: Walking player_784
+    21301570: Walking player_785
+    21301572: Walking player_786
+    21301574: Walking player_787
+    21301576: Walking player_788
+    21301578: Walking player_789
+    21301580: Walking player_790
+    21301582: Walking player_791
+    21301584: Walking player_792
+    21301586: Walking player_793
+    21301588: Walking player_794
+    21301590: Walking player_795
+    21301592: Walking player_796
+    21301594: Walking player_797
+    21301596: Walking player_798
+    21301598: Walking player_799
+    21301600: Walking player_800
+    21301602: Walking player_801
+    21301604: Walking player_802
+    21301606: Walking player_803
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -31,7 +840,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -40,13 +849,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 26
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,9 +875,61 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Walking player_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking player_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Walking player_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
