@@ -21,13 +21,13 @@ public class Arrow_flight : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (is_returning)
+		if (is_returning && prevBody != null)
 			arrowRigidbody.velocity = (prevBody.transform.position - transform.position) * 3;
 
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
-		if (col.gameObject.tag == "Controllable" && (is_returning || !col.gameObject.Equals(prevBody)) )
+		if (col.gameObject.tag == "Controllable" && (!col.gameObject.Equals(prevBody) || is_returning) )
 			takeControl (col.gameObject);
 		else if (col.gameObject.tag == "Ground")
 			arrowReturn ();		
@@ -52,7 +52,6 @@ public class Arrow_flight : MonoBehaviour {
 		prevBody = oldBody;
 		prevBody.gameObject.tag = "Controllable";
 	}
-		
 		
 	void arrowReturn(){
 		is_returning = true;
