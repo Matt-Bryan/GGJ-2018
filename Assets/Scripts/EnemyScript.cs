@@ -9,9 +9,6 @@ public class EnemyScript : MonoBehaviour {
 	public float detectDistance = 3f;
 	public GameObject player;
 
-	public Vector2 patrolPt1;
-	public Vector2 patrolPt2;
-
 	//private bool towardPt1 = true;
 	private bool left = true;
 	private bool patrol = true;
