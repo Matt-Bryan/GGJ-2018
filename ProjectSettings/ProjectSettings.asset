@@ -4,11 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-<<<<<<< HEAD
-  productGUID: 33aad30eb5a757548b8ba7ac86f15abc
-=======
-  productGUID: d2cb19c35cbbc9844b0a40ee13e90df4
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
+  productGUID: 1837dbec73d79fc45b4bf5b435cd6ceb
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -16,11 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-<<<<<<< HEAD
-  productName: GGJ18
-=======
   productName: GGJ-2018
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -465,11 +457,7 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
-<<<<<<< HEAD
-  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
-=======
-  ps4Passcode: YdD3ojxSnqPTGfRyilOYGxlSXPtLJboH
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
+  ps4Passcode: eaoEiIgxIX4a2dREbbSqWy6yhKIDCdJO
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -515,11 +503,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-<<<<<<< HEAD
-  psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
-=======
-  psp2PackagePassword: 8S4kwIgTxSl1C00GOzOLMrbAyfKUUTsG
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
+  psp2PackagePassword: yapnxrpMCARCr4zdGc81tBDKsMlaZTXC
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
@@ -574,22 +558,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-<<<<<<< HEAD
-  metroPackageName: GGJ18
-=======
   metroPackageName: GGJ-2018
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-<<<<<<< HEAD
-  metroApplicationDescription: GGJ18
-=======
   metroApplicationDescription: GGJ-2018
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -654,18 +630,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-<<<<<<< HEAD
-  cloudServicesEnabled:
-    UNet: 1
-  facebookSdkVersion: 7.9.4
-=======
   cloudServicesEnabled: {}
-  facebookSdkVersion: 
->>>>>>> d0ba45810904097c3eef14325c57d4d1a640b5d1
+  facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: d506836d-68ae-447d-8801-09ea911aa064
-  projectName: GGJ18
-  organizationId: jthpotz-gmail-com
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
