@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour {
+public class SceneWrangler : MonoBehaviour {
 
 	public string thisLevel;
 	public string nextLevel;
