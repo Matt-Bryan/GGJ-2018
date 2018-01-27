@@ -26,6 +26,7 @@ public class projectileAttack : MonoBehaviour {
 	}
 
 	public void tryToAttack(GameObject player) {
+		Debug.Log ("Trying to attack");
 		this.player = player;
 		if (attackTimer >= cooldown && !isAttacking) {
 			isAttacking = true;
