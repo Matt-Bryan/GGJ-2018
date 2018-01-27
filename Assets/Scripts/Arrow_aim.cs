@@ -8,13 +8,13 @@ public class Arrow_aim : MonoBehaviour {
 	private float mouseLocX;
 	private float mouseLocY;
 	public GameObject arrowProjectile;
-	GameObject camera;
+	GameObject playerCamera;
 	Quaternion rotation;
 	private static float piTimes2 = 6.28f;
 	// Use this for initialization
 	void Start () {
 		arrowTransform = GetComponent<Transform> ();
-		camera = GameObject.Find ("Main Camera");
+		playerCamera = GameObject.Find ("Main Camera");
 		//arrowTransform.rotation.Set (0.0f, 0.0f, 90.0f, 0.0f);
 	}
 	
@@ -34,8 +34,10 @@ public class Arrow_aim : MonoBehaviour {
 
 	void Shoot(){
 		GameObject projectile = (GameObject)Instantiate (arrowProjectile, transform.position, transform.rotation);
-		camera.transform.SetParent (projectile.transform);
+		//projectile.GetComponent<Arrow_flight> ().SendMessage ("setPrevBody", transform.parent);
+		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
+		playerCamera.transform.SetParent (projectile.transform);
+		GetComponentInParent<PlayerScript> ().enabled = false;
 		GetComponent<Arrow_aim> ().enabled = false;
-
 	}
 }
