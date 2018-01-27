@@ -103,6 +103,9 @@ MonoBehaviour:
   enemySpeed: 0.01
   detectDistance: 5
   player: {fileID: 0}
+  patrolPt1: {x: 0, y: 0}
+  patrolPt2: {x: 0, y: 0}
+  aoe: {fileID: 0}
 --- !u!114 &114156175836512056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a90137ed075a4408b2a4727ddf4b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 7
-  jumpSpeed: 7
+  maxSpeed: 5
+  jumpSpeed: 5
 --- !u!212 &212846181173721276
 SpriteRenderer:
   m_ObjectHideFlags: 1
