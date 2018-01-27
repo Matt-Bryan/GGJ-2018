@@ -32,9 +32,10 @@ public class Arrow_aim : MonoBehaviour {
 
 	void Shoot(){
 		GameObject projectile = (GameObject)Instantiate (arrowProjectile, transform.position, transform.rotation);
-		projectile.GetComponent<Arrow_flight> ().SendMessage ("SetPrevBody", transform.parent.gameObject);
+		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
 		playerCamera.transform.SetParent (projectile.transform);
 		GetComponentInParent<PlayerScript> ().enabled = false;
+		transform.parent.gameObject.tag = "Controllable";
 		Destroy (arrowTransform.gameObject);
 	}
 }
