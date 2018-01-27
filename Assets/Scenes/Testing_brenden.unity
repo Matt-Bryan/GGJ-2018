@@ -243,6 +243,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -343,6 +347,10 @@ Prefab:
       propertyPath: m_Name
       value: CenterTile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -390,6 +398,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1081294898283346, guid: af5f5accbeb92bc45b8bfaac296d5220, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af5f5accbeb92bc45b8bfaac296d5220, type: 2}
   m_IsPrefabParent: 0
@@ -435,6 +447,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -524,6 +540,10 @@ Prefab:
       propertyPath: m_Name
       value: CenterTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -575,6 +595,10 @@ Prefab:
       propertyPath: m_Name
       value: CenterTile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -616,6 +640,10 @@ Prefab:
     - target: {fileID: 4865428654191232, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747366011398824, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
@@ -662,6 +690,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -714,6 +746,10 @@ Prefab:
       propertyPath: m_Name
       value: RightTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1747366011398824, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
   m_IsPrefabParent: 0
@@ -759,6 +795,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -942,6 +982,10 @@ Prefab:
       propertyPath: m_Name
       value: CenterTile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -988,6 +1032,10 @@ Prefab:
       propertyPath: m_Name
       value: CenterTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -1029,6 +1077,10 @@ Prefab:
     - target: {fileID: 4174605112102428, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_RootOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -1075,6 +1127,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -1142,6 +1198,10 @@ Prefab:
       propertyPath: m_Name
       value: LeftTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1081294898283346, guid: af5f5accbeb92bc45b8bfaac296d5220, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af5f5accbeb92bc45b8bfaac296d5220, type: 2}
   m_IsPrefabParent: 0
@@ -1187,6 +1247,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -1243,6 +1307,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -1426,6 +1494,8 @@ MonoBehaviour:
   enemySpeed: 0
   detectDistance: 1
   player: {fileID: 0}
+  patrolPt1: {x: 0, y: 0}
+  patrolPt2: {x: 0, y: 0}
 --- !u!4 &1741382749 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4174605112102428, guid: 61502c3af235d1f48ab51b88fa3cf2a2,
@@ -1480,6 +1550,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 1747366011398824, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ab0a2f9c63e5464d97002f0683335c4, type: 2}
   m_IsPrefabParent: 0
@@ -1525,6 +1599,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
@@ -1572,6 +1650,10 @@ Prefab:
       propertyPath: m_Name
       value: CenterTile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
   m_IsPrefabParent: 0
@@ -1617,6 +1699,10 @@ Prefab:
     - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
       propertyPath: m_Name
       value: CenterTile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1965035045036102, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 61502c3af235d1f48ab51b88fa3cf2a2, type: 2}
