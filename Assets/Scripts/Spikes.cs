@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Spikes : MonoBehaviour {
 
-	public string thisLevel = "TestingJohn1";
+	public string thisLevel;
 
 	void OnTriggerEnter2D(Collider2D other) {
 		SceneManager.LoadScene (thisLevel);
