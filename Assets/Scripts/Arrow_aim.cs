@@ -28,13 +28,11 @@ public class Arrow_aim : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire1"))
 			Shoot ();
-		
-		
 	}
 
 	void Shoot(){
 		GameObject projectile = (GameObject)Instantiate (arrowProjectile, transform.position, transform.rotation);
-		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
+		projectile.GetComponent<Arrow_flight> ().SendMessage ("SetPrevBody", transform.parent.gameObject);
 		playerCamera.transform.SetParent (projectile.transform);
 		GetComponentInParent<PlayerScript> ().enabled = false;
 		Destroy (arrowTransform.gameObject);

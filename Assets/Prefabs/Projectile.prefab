@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50558991514167464}
   - component: {fileID: 61254154496911490}
   m_Layer: 0
-  m_Name: Pickup
+  m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
