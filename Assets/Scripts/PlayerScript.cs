@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour {
 	public float maxSpeed = 10;
 	public float jumpSpeed = 10;
 
+	/*Jump Heights: 5 is one block high; 7 is two blocks high*/
+
 	private bool isGrounded = true;
 	private Rigidbody2D rb2d;
 
