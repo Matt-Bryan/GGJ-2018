@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212038854146039914}
   - component: {fileID: 50558991514167464}
   - component: {fileID: 61254154496911490}
+  - component: {fileID: 114415675938378986}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.69, y: 2.73}
   m_EdgeRadius: 0
+--- !u!114 &114415675938378986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980576269852912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c0c70c87164084c84c246b730f6935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212038854146039914
 SpriteRenderer:
   m_ObjectHideFlags: 1
