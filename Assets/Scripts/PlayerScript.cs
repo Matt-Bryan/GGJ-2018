@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class PlayerScript : MonoBehaviour {
 	public float jumpSpeed = 10;
 
 	/*Jump Heights: 5 is one block high; 7 is two blocks high*/
+
+	public string thisLevel;
 
 	private bool isGrounded = true;
 	private bool isFacingRight = true;
@@ -48,9 +51,35 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision) {
-		isGrounded = true;
+	private void OnCollisionEnter2D(Collision2D col) {
+		if(this.enabled){
+			switch (col.gameObject.tag) {
+			case "Ground":
+				isGrounded = true;
+				break;
+			case "Controllable":
+			case "Projectile":
+				Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);
+				SceneManager.LoadScene ("Level8");
+				break;
+			default:
+				Debug.LogWarning ("There is no default behavior for player collisions with: " + col.gameObject);
+				break;
+			}
+		}
 	}
+
+	private void OnTriggerEnter2D(Collider2D col){
+		if(this.enabled){
+			if(col.gameObject.tag == "Projectile"){
+				Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);
+				SceneManager.LoadScene ("Level8");
+			}
+
+		}
+
+	}
+
 
 	void Flip() {
 		// Switch the way the player is labelled as facing

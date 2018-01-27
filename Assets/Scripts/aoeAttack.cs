@@ -35,7 +35,7 @@ public class aoeAttack : MonoBehaviour {
 
 	IEnumerator attack() {
 		for (int count = 0; count < numProjectiles; count++) {
-			Debug.Log (instantiatedObjects.Count);
+			//Debug.Log (instantiatedObjects.Count);
 			instantiatedObjects.Add (Instantiate (aoePrefab, transform.position, Quaternion.identity));
 			Vector3 forceVector = new Vector3(Mathf.Cos(count * 15), Mathf.Sin(count * 15), 0);
 			Rigidbody2D shotRb = instantiatedObjects[instantiatedObjects.Count-1].GetComponent<Rigidbody2D>();
