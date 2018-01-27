@@ -17,8 +17,10 @@ public class Exit : MonoBehaviour {
 			break;
 		case "Arrow_Flying":
 			break;
+		case "Projectile":
+			break;
 		default:
-			Debug.LogError ("Setup spikes for this object! " + other.gameObject);
+			Debug.LogError ("Setup exit for this object! " + other.gameObject);
 			break;
 		}
 	}
