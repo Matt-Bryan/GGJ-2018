@@ -13,8 +13,10 @@ public class Spikes : MonoBehaviour {
 			SceneManager.LoadScene (thisLevel);
 			Debug.Log ("Died");
 			break;
-		case "Enemy":
+		case "Controllable":
 			GameObject.Destroy (other.gameObject);
+			break;
+		case "Arrow_Flying":
 			break;
 		default:
 			Debug.LogError ("Setup spikes for this object! " + other.gameObject);
