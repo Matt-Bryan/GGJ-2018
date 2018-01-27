@@ -12,19 +12,19 @@ public class PlayerScript : MonoBehaviour {
 	private bool isGrounded = true;
 	private bool isFacingRight = true;
 	private Rigidbody2D rb2d;
-	private Animator anim;
+	//private Animator anim;
 
 	// Use this for initialization
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+		//anim = GetComponent<Animator>();
 	}
 
 	// FixedUpdate is called once per frame
 	void FixedUpdate() {
 		float x = Input.GetAxis("Horizontal");
 
-		if (x < 0f && isFacingRight) {
+		/*if (x < 0f && isFacingRight) {
 			//If we're moving right but not facing right, flip the sprite and set facingRight to true.
 			Flip();
 			isFacingRight = false;
@@ -35,11 +35,11 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (x != 0) {
-			anim.Play("PlayerWalking");
+			//anim.Play("PlayerWalking");
 		}
 		else {
-			anim.Play("PlayerIdle");
-		}
+			//anim.Play("PlayerIdle");
+		}*/
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
 		if (isGrounded && Input.GetButtonDown("Jump")) {

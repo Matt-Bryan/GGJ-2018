@@ -18,6 +18,8 @@ public class Spikes : MonoBehaviour {
 			break;
 		case "Arrow_Flying":
 			break;
+		case "Projectile":
+			break;
 		default:
 			Debug.LogError ("Setup spikes for this object! " + other.gameObject);
 			break;

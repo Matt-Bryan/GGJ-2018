@@ -54,7 +54,5 @@ public class aoeAttack : MonoBehaviour {
 
 			}
 		}
-		instantiatedObjects.Clear ();
-		Debug.Log ("Should be empty" + instantiatedObjects.Count);
 	}
 }
