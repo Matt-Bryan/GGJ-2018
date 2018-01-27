@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// To use this script, attach to an actor, put in the public variables, and then call tryToAttack()
+
 public class aoeAttack : MonoBehaviour {
 
-	public GameObject aoePrefab;
-	public float projSpeed;
-	public float projDestroTime;
-	public float cooldown;
+	public GameObject aoePrefab;	// Prefab of the aoe projectile
+	public float projSpeed;			// How fast the projectiles will move (150 is pretty good)
+	public float projDestroTime;	// How soon the projectile will be destroyed after firing
+	public float cooldown;			// How long until the aoe can be shot again
 
 	private GameObject[] instantiatedObjects = new GameObject[8];
 	private float attackTimer = 3.0f;

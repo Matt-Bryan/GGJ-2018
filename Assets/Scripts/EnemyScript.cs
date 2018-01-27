@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyScript : MonoBehaviour {
 
 	public float enemySpeed;
-	public float detectDistance = 1f;
+	public float detectDistance = 3f;
 	public GameObject player;
 
 	public Vector2 patrolPt1;
@@ -25,14 +25,19 @@ public class EnemyScript : MonoBehaviour {
 		Vector2 selfPosition = transform.position;
 		Vector2 playerPosition = player.transform.position;
 
-		RaycastHit2D hit = Physics2D.Raycast(selfPosition, playerPosition - selfPosition);
-		Debug.Log("Collider: " + hit.collider + "\nTag: " + hit.collider.gameObject.tag);
-		Debug.DrawLine(selfPosition, playerPosition);
+		RaycastHit2D hit = Physics2D.Raycast(selfPosition,
+			playerPosition - selfPosition);
 
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
 			patrol = false;
 			transform.position = Vector2.MoveTowards(transform.position,
 				player.transform.position, enemySpeed);
+			float enemyToPlayerDist =
+				Mathf.Abs(Vector2.Distance(selfPosition, playerPosition));
+			if (enemyToPlayerDist < detectDistance) {
+				transform.position = Vector2.MoveTowards(transform.position,
+					player.transform.position, enemySpeed);
+			}
 		}
 		else{
 			patrol = true;
