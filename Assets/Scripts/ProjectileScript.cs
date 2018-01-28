@@ -15,7 +15,6 @@ public class ProjectileScript : MonoBehaviour {
 
 	void Update() {
 		timer += Time.deltaTime;
-		Debug.Log(timer);
 		if (timer >= killTime) {
 			Destroy(this.gameObject);
 		}
@@ -24,5 +23,4 @@ public class ProjectileScript : MonoBehaviour {
 	public void setKillTime(float time) {
 		killTime = time;
 	}
-
 }
