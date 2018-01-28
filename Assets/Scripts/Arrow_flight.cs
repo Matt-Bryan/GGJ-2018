@@ -12,6 +12,9 @@ public class Arrow_flight : MonoBehaviour {
 	private bool is_returning = false;
 	private EnemyScript prevES;
 
+	private EnemyScript newES;
+	private PlayerScript newPS;
+
 	public AudioClip onCreate;
 	public AudioClip whileFlying;
 	public AudioClip onFail;
@@ -68,9 +71,18 @@ public class Arrow_flight : MonoBehaviour {
 	void takeControl(GameObject newBody){
 		Debug.Log (is_returning);
 		Debug.Log ("taking control");
-		newBody.GetComponent<EnemyScript> ().gPlayer.player = newBody.gameObject;
-		newBody.GetComponent<PlayerScript> ().CheckDirection ();
-		newBody.GetComponent<PlayerScript> ().enabled = true;
+		newES = newBody.GetComponent<EnemyScript> ();
+		newPS = newBody.GetComponent<PlayerScript> ();
+		if (newES != null) {
+			newES.gPlayer.player = newBody.gameObject;
+		} 
+		if (newPS != null) {
+			newPS.CheckDirection ();
+			newPS.enabled = true;
+		}
+		//newBody.GetComponent<EnemyScript> ().gPlayer.player = newBody.gameObject;
+		//newBody.GetComponent<PlayerScript> ().CheckDirection ();
+		//newBody.GetComponent<PlayerScript> ().enabled = true;
 		prevBody.tag = "Controllable";
 		if (prevES != null) {
 			prevES.enabled = true;
@@ -82,7 +94,9 @@ public class Arrow_flight : MonoBehaviour {
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
 		playerCamera.transform.localPosition = new Vector3 (0.0f, 0.0f, -10.0f);
-		newBody.GetComponent<EnemyScript> ().enabled = false;
+		if (newES != null) {
+			newBody.GetComponent<EnemyScript> ().enabled = false;
+		}
 		Destroy (gameObject);
 	}
 
