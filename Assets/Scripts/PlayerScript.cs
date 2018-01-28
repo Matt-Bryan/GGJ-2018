@@ -132,6 +132,15 @@ public class PlayerScript : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+		Vector3 childTransform = transform.GetChild(0).transform.localScale;
+
+		Debug.Log("Child Transform stuff: " + childTransform.x);
+
+		if (transform.localScale.x * childTransform.x < 0) {
+			childTransform.x *= -1;
+			transform.GetChild(0).transform.localScale = childTransform;
+		}
 	}
 
 	public void Die(){
