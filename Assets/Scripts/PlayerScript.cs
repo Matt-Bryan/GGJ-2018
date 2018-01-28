@@ -10,6 +10,10 @@ public class PlayerScript : MonoBehaviour {
 
 	/*Jump Heights: 5 is one block high; 7 is two blocks high*/
 
+	public float height = 0.6f;
+
+	//height of ridigbody
+
 	public string thisLevel;
 	public string nextLevel;
 
@@ -25,7 +29,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	// FixedUpdate is called once per frame
-	void FixedUpdate() {
+	void Update() {
 		float x = Input.GetAxis("Horizontal");
 
 		if (x < 0f && isFacingRight) {
@@ -47,17 +51,29 @@ public class PlayerScript : MonoBehaviour {
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
 		if (isGrounded && Input.GetButtonDown("Jump")) {
-			isGrounded = false;
+			//isGrounded = false;
 			rb2d.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+		}
+
+		//attemp to change isGrounded to raycast
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+		if (hit.collider != null) {
+			float distance = Mathf.Abs (hit.point.y - transform.position.y);
+			if (distance < height / 2.0f + .01f)
+				isGrounded = true;
+			else
+				isGrounded = false;
 		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D col) {
 		if(this.enabled){
 			switch (col.gameObject.tag) {
+				/*
 			case "Ground":
 				isGrounded = true;
 				break;
+				*/
 			case "Controllable":
 			case "Projectile":
 				//Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);

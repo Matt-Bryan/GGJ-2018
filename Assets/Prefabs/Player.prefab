@@ -99,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1341606668502126}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: 1, z: 0}
+  m_LocalPosition: {x: -23.102785, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4086348656935448}
@@ -127,7 +127,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0054798126, y: 0.00000023841858}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -186,7 +186,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5769231, y: 1}
+  m_Size: {x: 0.8728256, y: 0.5068269}
   m_EdgeRadius: 0
 --- !u!81 &81001053205890768
 AudioListener:
@@ -209,8 +209,7 @@ MonoBehaviour:
   enemySpeed: 0
   detectDistance: 3
   player: {fileID: 0}
-  patrolPt1: {x: 0, y: 0}
-  patrolPt2: {x: 0, y: 0}
+  projAtk: {fileID: 0}
   aoe: {fileID: 0}
 --- !u!114 &114229371016627110
 MonoBehaviour:
@@ -238,6 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   jumpSpeed: 5
+  thisLevel: 
+  nextLevel: 
 --- !u!124 &124300090673849164
 Behaviour:
   m_ObjectHideFlags: 1
