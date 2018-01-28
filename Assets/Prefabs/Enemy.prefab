@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227570636252874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.89, y: -1.72, z: 0}
+  m_LocalPosition: {x: 5.7, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projPrefab: {fileID: 1980576269852912, guid: 6bc206aa97a52094aacf0e3e39b0f93f, type: 2}
-  projSpeed: 150
-  cooldown: 2
+  projSpeed: 200
+  cooldown: 1
+  projDestroTime: 6
 --- !u!212 &212846181173721276
 SpriteRenderer:
   m_ObjectHideFlags: 1
