@@ -73,9 +73,9 @@ public class Arrow_flight : MonoBehaviour {
 		newBody.GetComponent<PlayerScript> ().enabled = true;
 		prevBody.tag = "Controllable";
 		if (prevES != null) {
-			prevES.enabled = false;
-
+			prevES.enabled = true;
 		}
+
 		//prevBody.GetComponent<EnemyScript> ().enabled = true;
 
 		newBody.tag = "Player";

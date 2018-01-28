@@ -40,6 +40,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// FixedUpdate is called once per frame
 	void Update() {
+		
 		float x = Input.GetAxis("Horizontal");
 
 		if (x < 0f && isFacingRight) {
