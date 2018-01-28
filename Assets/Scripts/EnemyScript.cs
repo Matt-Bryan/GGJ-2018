@@ -58,6 +58,7 @@ public class EnemyScript : MonoBehaviour {
 					projAtk.tryToAttack (hit.collider.gameObject);
 				}
 				else if (isAoe) {
+					Debug.Log ("aoe attempt");
 					aoe.tryToAttack();
 				}
 				else {
