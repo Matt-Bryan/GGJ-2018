@@ -43,10 +43,10 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (x != 0) {
-			playerAnim.Play("PlayerWalking");
+			playerAnim.Play("WizardWalking");
 		}
 		else {
-			playerAnim.Play("PlayerIdle");
+			playerAnim.Play("WizardIdle");
 		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
