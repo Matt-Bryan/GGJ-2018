@@ -80,6 +80,7 @@ public class Arrow_flight : MonoBehaviour {
 
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
+
 		playerCamera.transform.SetParent (newBody.transform);
 		playerCamera.transform.localPosition = new Vector3 (0.0f, 0.0f, -10.0f);
 		newBody.GetComponent<EnemyScript> ().enabled = false;
