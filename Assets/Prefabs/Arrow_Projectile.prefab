@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2448761f9e0c517479be9633ca3465e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flight_time: 3
   prevBody: {fileID: 0}
-  arrowSpeed: 6
+  arrowSpeed: 10
   arrowAiming: {fileID: 1195146995756186, guid: 0f679cc0ba8a63c4db4814c38d28dda9,
     type: 2}
 --- !u!212 &212544927991959224

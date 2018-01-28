@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Arrow_flight : MonoBehaviour {
-	private float flight_time = 3.0f;
+	public float flight_time = 1.50f;
 	private float flight_death_time = 5.0f;
 	private bool is_returning = false;
 	public GameObject prevBody;
@@ -19,7 +19,7 @@ public class Arrow_flight : MonoBehaviour {
 		arrowRigidbody = GetComponent<Rigidbody2D> ();
 		is_returning = false;
 		arrowRigidbody.velocity = transform.right * arrowSpeed;
-		StartCoroutine ("ArrowTimedReturn");
+		//StartCoroutine ("ArrowTimedReturn");
 	}
 	
 	// Update is called once per frame
@@ -56,12 +56,14 @@ public class Arrow_flight : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
+	/*
 	IEnumerator ArrowTimedReturn(){
 		yield return new WaitForSeconds(flight_time);
 		arrowReturn ();
 		yield return new WaitForSeconds (flight_death_time);
-		GameObject.Find ("GameManager").SendMessage ("Die");
+		GameObject.Find ("GameControllerObject").SendMessage ("Die");
 	}
+	*/
 		
 	void arrowReturn(){
 		Debug.Log ("is returning");
