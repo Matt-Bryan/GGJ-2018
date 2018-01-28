@@ -36,7 +36,7 @@ public class Arrow_aim : MonoBehaviour {
 		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
 		playerCamera.transform.SetParent (projectile.transform);
 		GetComponentInParent<PlayerScript> ().enabled = false;
-		parentRB.velocity = new vector2 (0.0f, parentRB.velocity.y);
+		parentRB.velocity = new Vector2 (0.0f, parentRB.velocity.y);
 		Destroy (arrowTransform.gameObject);
 	}
 }
