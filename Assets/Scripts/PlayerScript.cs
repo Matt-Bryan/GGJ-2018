@@ -53,6 +53,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (x != 0) {
+<<<<<<< HEAD
 			playerAnim.Play("PlayerWalking");
 			if (isGrounded) {
 				soundSource.UnPause ();
@@ -63,6 +64,12 @@ public class PlayerScript : MonoBehaviour {
 		else {
 			playerAnim.Play("PlayerIdle");
 			soundSource.Pause();
+=======
+			playerAnim.Play("WizardWalking");
+		}
+		else {
+			playerAnim.Play("WizardIdle");
+>>>>>>> c9b2289935e36f89ec8896fbfc3cf23aeea4e8db
 		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);

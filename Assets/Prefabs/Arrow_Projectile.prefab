@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114488638011871666}
   - component: {fileID: 61406230008224292}
   - component: {fileID: 95361426654465816}
+  - component: {fileID: 82954060673371042}
   m_Layer: 0
   m_Name: Arrow_Projectile
   m_TagString: Arrow_Flying
@@ -89,6 +90,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3294468, y: 0.609375}
   m_EdgeRadius: 0
+--- !u!82 &82954060673371042
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839155749670982}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95361426654465816
 Animator:
   serializedVersion: 3
@@ -118,8 +199,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flight_time: 3
-  prevBody: {fileID: 0}
   arrowSpeed: 10
+  onCreate: {fileID: 8300000, guid: db48631e04263dc449b0db0bc65b4c4e, type: 3}
+  whileFlying: {fileID: 8300000, guid: 8e809cbe0dd4baf45b6750c1ff12220c, type: 3}
+  onFail: {fileID: 8300000, guid: bb0f8aed6e63acf4a91d05e324fa96da, type: 3}
+  onCreateLength: 0.4
+  prevBody: {fileID: 0}
   arrowAiming: {fileID: 1195146995756186, guid: 0f679cc0ba8a63c4db4814c38d28dda9,
     type: 2}
 --- !u!212 &212544927991959224

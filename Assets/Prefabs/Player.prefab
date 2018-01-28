@@ -198,10 +198,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -411,6 +411,7 @@ MonoBehaviour:
   thisLevel: Stage1
   nextLevel: 
   isGrounded: 1
+  walkingSound: {fileID: 8300000, guid: f328d4984df41ff459eebf0107e5db3a, type: 3}
 --- !u!124 &124300090673849164
 Behaviour:
   m_ObjectHideFlags: 1

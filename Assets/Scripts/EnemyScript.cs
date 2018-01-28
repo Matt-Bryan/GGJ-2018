@@ -26,6 +26,11 @@ public class EnemyScript : MonoBehaviour {
 
 	public GlobalPlayer gPlayer;
 
+	private AudioSource soundSource;
+	public AudioClip walkingSound;
+
+	private Rigidbody2D enemyRigidbody;
+
 	// Use this for initialization
 	void Start () {
 
@@ -36,13 +41,30 @@ public class EnemyScript : MonoBehaviour {
 		else if(aoe != null){
 			isAoe = true;
 		}
+
+		soundSource = GetComponent<AudioSource> ();
+		soundSource.clip = walkingSound;
+		//change pitch/speed to get sound effect to match animation better
+		soundSource.pitch = 1.0f;
+		soundSource.Play ();
+		soundSource.loop = true;
+
+		enemyRigidbody = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+		if (enemyRigidbody.velocity.magnitude > 0) {
+			soundSource.UnPause ();
+		} else {
+			soundSource.Pause ();
+		}
+
 //		if((left && gameObject.transform.position.x < 0) || (!left && gameObject.transform.position.x > 0)){
 //			Flip ();
 //		}
+
 		Vector2 selfPosition = transform.position;
 		Vector2 playerPosition = gPlayer.player.transform.position;
 
