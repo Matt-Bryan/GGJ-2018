@@ -50,10 +50,11 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
-		if (isGrounded && Input.GetButtonDown("Jump")) {
+		if (isGrounded && Input.GetButtonDown ("Jump")) {
 			//isGrounded = false;
-			rb2d.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-		}
+			rb2d.AddForce (Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+		} else if (Input.GetButtonUp ("Jump") && rb2d.velocity.y > 0.0f)
+			rb2d.velocity = new Vector2 (rb2d.velocity.x, 0.0f);
 
 		//attemp to change isGrounded to raycast
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
