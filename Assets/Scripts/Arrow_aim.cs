@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Arrow_aim : MonoBehaviour {
+
+	private SpriteRenderer sr;
+	private PlayerScript parentPS;
 	private Transform arrowTransform;
 	private Vector2 arrowDirection;
 	private float mouseLocX;
@@ -14,6 +17,8 @@ public class Arrow_aim : MonoBehaviour {
 	private static float piTimes2 = 6.28f;
 	// Use this for initialization
 	void Start () {
+		parentPS = GetComponent<PlayerScript> ();
+		sr = GetComponent<SpriteRenderer> ();
 		parentRB = GetComponentInParent<Rigidbody2D> ();
 		arrowTransform = GetComponent<Transform> ();
 		playerCamera = GameObject.Find ("Main Camera");
@@ -27,15 +32,21 @@ public class Arrow_aim : MonoBehaviour {
 		rotation = Quaternion.Euler( 0, 0, (Mathf.Atan2 (arrowDirection.y, arrowDirection.x) / piTimes2 * 360) );
 		arrowTransform.rotation = rotation;
 
-		if (Input.GetButtonDown ("Fire1"))
+		if (Input.GetButtonDown ("Fire1")) {
+			sr.enabled = true;
+		} else if (Input.GetButtonUp ("Fire1")) {
+			sr.enabled = true;
 			Shoot ();
+		}
 	}
 
 	void Shoot(){
 		GameObject projectile = (GameObject)Instantiate (arrowProjectile, transform.position, transform.rotation);
 		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
 		playerCamera.transform.SetParent (projectile.transform);
-		GetComponentInParent<PlayerScript> ().enabled = false;
+		if (parentPS != null) {
+			parentPS.enabled = false;
+		}
 		parentRB.velocity = new Vector2 (0.0f, parentRB.velocity.y);
 		Destroy (arrowTransform.gameObject);
 	}

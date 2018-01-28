@@ -171,7 +171,7 @@ Animator:
   m_GameObject: {fileID: 1748097188986760}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 20d30a579d02d8048824f9dbeb990d29, type: 2}
+  m_Controller: {fileID: 9100000, guid: 49fdc27e079e5bf4c8d0d4d99540068a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
   detectDistance: 8
   projAtk: {fileID: 114764197134875656}
   aoe: {fileID: 0}
+  wizard: 0
   gPlayer: {fileID: 0}
   walkingSound: {fileID: 0}
 --- !u!114 &114764197134875656

@@ -29,30 +29,19 @@ public class aoeAttack : MonoBehaviour {
 	public void tryToAttack() {
 		if (attackTimer >= cooldown) {
 			attackTimer = 0.0f;
-			StartCoroutine(attack());
+			attack();
 		}
 	}
 
-	IEnumerator attack() {
+	void attack() {
 		for (int count = 0; count < numProjectiles; count++) {
-			//Debug.Log (instantiatedObjects.Count);
 			instantiatedObjects.Add (Instantiate (aoePrefab, transform.position, Quaternion.identity));
 			Vector3 forceVector = new Vector3(Mathf.Cos(count * 15), Mathf.Sin(count * 15), 0);
 			Rigidbody2D shotRb = instantiatedObjects[instantiatedObjects.Count-1].GetComponent<Rigidbody2D>();
 			shotRb.AddForce (forceVector.normalized * projSpeed);
+			instantiatedObjects[count].GetComponent<ProjectileScript>().setKillTime(projDestroTime);
 		}
-		yield return new WaitForSeconds(projDestroTime);
 
-		for (int count = 0; count < numProjectiles; count++) {
-			if(instantiatedObjects.Count == 0){
-				break;
-			}
-			GameObject temp = instantiatedObjects [0];
-			instantiatedObjects.Remove (instantiatedObjects[0]);
-			if(temp != null){
-				GameObject.Destroy(temp);
-
-			}
-		}
+		instantiatedObjects.Clear();
 	}
 }
