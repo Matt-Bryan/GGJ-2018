@@ -72,7 +72,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1227570636252874}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 05ca25b25a2d37a43a6914ec24acc956, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -103,8 +103,7 @@ MonoBehaviour:
   enemySpeed: 0.01
   detectDistance: 5
   player: {fileID: 0}
-  patrolPt1: {x: 0, y: 0}
-  patrolPt2: {x: 0, y: 0}
+  projAtk: {fileID: 0}
   aoe: {fileID: 0}
 --- !u!114 &114156175836512056
 MonoBehaviour:
@@ -119,6 +118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   jumpSpeed: 5
+  height: 0.6
+  thisLevel: 
+  nextLevel: 
 --- !u!212 &212846181173721276
 SpriteRenderer:
   m_ObjectHideFlags: 1

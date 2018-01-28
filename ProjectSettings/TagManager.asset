@@ -10,6 +10,7 @@ TagManager:
   - Arrow_Flying
   - Projectile
   - TurnPoint
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackgroundDetail
+    uniqueID: 200572713
     locked: 0

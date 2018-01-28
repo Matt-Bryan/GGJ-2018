@@ -9,12 +9,13 @@ public class EnemyScript : MonoBehaviour {
 	public float detectDistance = 3f;
 	public GameObject player;
 
-	//private bool towardPt1 = true;
 	private bool left = true;
 	private bool patrol = true;
 
-	/*An enemy can only be either projectile or aoe, not both.  If both scripts are set, 
-	 * then projectiile takes precedence*/
+	/*
+	 * An enemy can only be either projectile or aoe, not both.  If both scripts are set, 
+	 * then projectiile takes precedence
+	 */
 
 	public projectileAttack projAtk;
 	private bool isProjAtk = false;
@@ -22,72 +23,90 @@ public class EnemyScript : MonoBehaviour {
 	public aoeAttack aoe;
 	private bool isAoe = false;
 
+	private Animator enemyAnim;
 
 	// Use this for initialization
 	void Start () {
-
-		if(projAtk != null){
+		enemyAnim = GetComponent<Animator>();
+		if (projAtk != null){
 			isProjAtk = true;
 		}
 		else if(aoe != null){
 			isAoe = true;
 		}
-
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		Vector2 selfPosition = transform.position;
 		Vector2 playerPosition = player.transform.position;
 
 		RaycastHit2D hit = Physics2D.Raycast(selfPosition,
 			playerPosition - selfPosition);
 		Debug.DrawRay (selfPosition, playerPosition - selfPosition);
-		//Debug.Log (Mathf.Sqrt ());
+
+		enemyAnim.Play("EnemyWalking");
+
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
 			float enemyToPlayerDist =
 				Mathf.Abs(Vector2.Distance(selfPosition, playerPosition));
 			if (enemyToPlayerDist < detectDistance) {
 				patrol = false;
-				if(isProjAtk){
+				if (isProjAtk) {
 					projAtk.tryToAttack (hit.collider.gameObject);
 				}
-				else if(isAoe){
-					//Debug.Log (aoe);
-					aoe.tryToAttack ();
+				else if (isAoe) {
+					aoe.tryToAttack();
 				}
-				else{
-				transform.position = Vector2.MoveTowards(transform.position,
-					player.transform.position, enemySpeed);
+				else {
+					transform.position = Vector2.MoveTowards(transform.position,
+						player.transform.position, enemySpeed);
+					if ((selfPosition.x + playerPosition.x) < 0 &&
+						transform.localScale.x > 0) {
+						Flip();
+					}
+					else if ((selfPosition.x + playerPosition.x) > 0 &&
+						transform.localScale.x < 0) {
+						Flip();
+					}
 				}
 			}
-			else{
+			else {
 				patrol = true;
 			}
 		}
-		else{
+		else {
 			patrol = true;
 		}
 
-//		if((Vector2)transform.position == patrolPt1 || (Vector2)transform.position == patrolPt2){
-//			towardPt1 = !towardPt1;
-//		}
-
-		if(patrol){
-			if(left){
-				transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x-1, transform.position.y), enemySpeed);
+		if (patrol) {
+			if (left) {
+				transform.position = Vector2.MoveTowards(transform.position,
+					new Vector2(transform.position.x-1, transform.position.y), enemySpeed);
+				if (transform.localScale.x > 0) {
+					Flip();
+				}
 			}
-			else{
-				transform.position = Vector2.MoveTowards (transform.position, new Vector2(transform.position.x+1, transform.position.y), enemySpeed);
+			else {
+				transform.position = Vector2.MoveTowards (transform.position,
+					new Vector2(transform.position.x+1, transform.position.y), enemySpeed);
+				if (transform.localScale.x < 0) {
+					Flip();
+				}
 			}
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D col){
-		//Debug.Log ("Enemy Collided");
-		if(enabled == true && patrol && col.gameObject.tag == "Controllable"){
+	void Flip() {
+		// Multiply the player's x local scale by -1
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
+	void OnCollisionEnter2D(Collision2D col) {
+		if (enabled == true && patrol && col.gameObject.tag == "Controllable") {
 			left = !left;
-			//Debug.Log ("Bounce on Enemy");
 		}
 	}
 
@@ -95,9 +114,5 @@ public class EnemyScript : MonoBehaviour {
 		if(enabled == true && patrol && col.gameObject.tag == "TurnPoint"){
 			left = !left;
 		}
-
 	}
-
-
-
 }
