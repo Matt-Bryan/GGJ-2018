@@ -5,5 +5,5 @@ A game where you control the soul of an old god that was trapped many years ago.
 This game was made in under 48 hours for Global Game Jam 2018
 
 Team Members:
-	Matt Bryan
+	Matt Bryan, Kevin Glass
 
