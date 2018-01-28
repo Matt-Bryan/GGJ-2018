@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 95634357523775558}
   - component: {fileID: 70133212361907554}
   - component: {fileID: 114862652858075598}
+  - component: {fileID: 82578807963999424}
   m_Layer: 0
   m_Name: EnemyAoe
   m_TagString: Controllable
@@ -81,6 +82,86 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.6, y: 1.04}
   m_Direction: 0
+--- !u!82 &82578807963999424
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977959773097366}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95634357523775558
 Animator:
   serializedVersion: 3
@@ -115,6 +196,7 @@ MonoBehaviour:
   thisLevel: Stage1
   nextLevel: 
   isGrounded: 1
+  walkingSound: {fileID: 0}
 --- !u!114 &114660128537457832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,6 +213,7 @@ MonoBehaviour:
   projAtk: {fileID: 0}
   aoe: {fileID: 114862652858075598}
   gPlayer: {fileID: 0}
+  walkingSound: {fileID: 0}
 --- !u!114 &114862652858075598
 MonoBehaviour:
   m_ObjectHideFlags: 1

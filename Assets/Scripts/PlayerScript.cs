@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
-	public float maxSpeed = 10;
-	public float jumpSpeed = 10;
+	public float maxSpeed;
+	public float jumpSpeed;
 
 	/*Jump Heights: 5 is one block high; 7 is two blocks high*/
 
-	public float height = 1.2f;
+	public float height;
 
 	//height of ridigbody
 
@@ -53,7 +53,6 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (x != 0) {
-<<<<<<< HEAD
 			playerAnim.Play("PlayerWalking");
 			if (isGrounded) {
 				soundSource.UnPause ();
@@ -64,12 +63,6 @@ public class PlayerScript : MonoBehaviour {
 		else {
 			playerAnim.Play("PlayerIdle");
 			soundSource.Pause();
-=======
-			playerAnim.Play("WizardWalking");
-		}
-		else {
-			playerAnim.Play("WizardIdle");
->>>>>>> c9b2289935e36f89ec8896fbfc3cf23aeea4e8db
 		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);
@@ -82,7 +75,6 @@ public class PlayerScript : MonoBehaviour {
 
 		//attempt to change isGrounded to raycast
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-		Debug.DrawLine (transform.position, -Vector2.up);
 		Debug.Log (hit.collider.gameObject);
 		if (hit.collider != null && hit.collider.tag == "Ground") {
 			float distance = Mathf.Abs (hit.point.y - transform.position.y);
