@@ -12,7 +12,9 @@ public class Spikes : MonoBehaviour {
 		case "Player":
 			//SceneManager.LoadScene (thisLevel);
 			//Debug.Log ("Died");
-			other.gameObject.transform.GetComponent<PlayerScript> ().Die ();
+			if(other.gameObject.GetComponent<PlayerScript> ().enabled){
+				other.gameObject.transform.GetComponent<PlayerScript> ().Die ();	
+			}
 			break;
 		case "Controllable":
 			GameObject.Destroy (other.gameObject);
@@ -24,6 +26,19 @@ public class Spikes : MonoBehaviour {
 		default:
 			Debug.LogError ("Setup spikes for this object! " + other.gameObject);
 			break;
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other){
+		if(other.gameObject.tag == "Player"){
+			if(other.gameObject.GetComponent<PlayerScript> ().enabled){
+				other.gameObject.transform.GetComponent<PlayerScript> ().Die ();	
+			}
+		}
+		else if(other.gameObject.tag == "Enemy"){
+			if(other.gameObject.GetComponent<EnemyScript> ().enabled){
+				GameObject.Destroy (other.gameObject);
+			}
 		}
 	}
 
