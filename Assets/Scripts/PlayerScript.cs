@@ -22,10 +22,20 @@ public class PlayerScript : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private Animator playerAnim;
 
+	//audio
+	private AudioSource soundSource;
+	public AudioClip walkingSound;
+
 	// Use this for initialization
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D>();
 		playerAnim = GetComponent<Animator>();
+
+		soundSource = GetComponent<AudioSource> ();
+		soundSource.clip = walkingSound;
+		//change pitch/speed to get sound effect to match animation better
+		soundSource.pitch = 2.0f;
+		soundSource.Play ();
 	}
 
 	// FixedUpdate is called once per frame
@@ -44,9 +54,15 @@ public class PlayerScript : MonoBehaviour {
 
 		if (x != 0) {
 			playerAnim.Play("PlayerWalking");
+			if (isGrounded) {
+				soundSource.UnPause ();
+			} else {
+				soundSource.Pause ();
+			}
 		}
 		else {
 			playerAnim.Play("PlayerIdle");
+			soundSource.Pause();
 		}
 
 		rb2d.velocity = new Vector2(x * maxSpeed, rb2d.velocity.y);

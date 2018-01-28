@@ -4,15 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Arrow_flight : MonoBehaviour {
+	
 	public float flight_time = 1.50f;
 	private float flight_death_time = 5.0f;
-	private bool is_returning = false;
-	public GameObject prevBody;
 	public int arrowSpeed;
+
+	private bool is_returning = false;
+
+	public AudioClip onCreate;
+	public AudioClip whileFlying;
+	public AudioClip onFail;
+	//length of time the onCreate sound effect should play
+	public float onCreateLength;
+	private AudioSource soundSource;
+
+	public GameObject prevBody;
 	public GameObject arrowAiming;
 	Rigidbody2D arrowRigidbody;
 	private GameObject playerCamera;
-
 	private Animator anim;
 
 	// Use this for initialization
@@ -23,7 +32,14 @@ public class Arrow_flight : MonoBehaviour {
 
 		is_returning = false;
 		arrowRigidbody.velocity = transform.right * arrowSpeed;
-		//StartCoroutine ("ArrowTimedReturn");
+		StartCoroutine ("ArrowTimedReturn");
+
+		//plays launching sound on projectile creation
+		soundSource = GetComponent<AudioSource> ();
+		soundSource.clip = onCreate;
+		soundSource.Play ();
+		//sets timer to change from intitial sound to looped sound
+		StartCoroutine("SoundChange");
 	}
 	
 	// Update is called once per frame
@@ -61,17 +77,28 @@ public class Arrow_flight : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	/*
+
 	IEnumerator ArrowTimedReturn(){
 		yield return new WaitForSeconds(flight_time);
 		arrowReturn ();
-		yield return new WaitForSeconds (flight_death_time);
-		GameObject.Find ("GameControllerObject").SendMessage ("Die");
+		//yield return new WaitForSeconds (flight_death_time);
+		//GameObject.Find ("GameControllerObject").SendMessage ("Die");
 	}
-	*/
+
 		
+	IEnumerator SoundChange(){
+		yield return new WaitForSeconds (onCreateLength);
+		if (!is_returning) {
+			soundSource.loop = true;
+			soundSource.clip = whileFlying;
+			soundSource.Play ();
+		}
+	}
+
 	void arrowReturn(){
-		Debug.Log ("is returning");
 		is_returning = true;
+		soundSource.loop = true;
+		soundSource.clip = onFail;
+		soundSource.Play ();
 	}
 }
