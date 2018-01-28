@@ -33,7 +33,7 @@ public class RedKey : MonoBehaviour {
 		foreach (GameObject o in barriers){
 			o.GetComponent<AudioSource> ().Play ();
 		}
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (1.0f);
 		foreach (GameObject o in barriers){
 			o.GetComponent<Animator>().Play("Open");
 			o.GetComponent<Collider2D>().enabled = false;
