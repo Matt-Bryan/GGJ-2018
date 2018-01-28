@@ -10,6 +10,7 @@ public class Arrow_flight : MonoBehaviour {
 	public int arrowSpeed;
 
 	private bool is_returning = false;
+	private EnemyScript prevES;
 
 	public AudioClip onCreate;
 	public AudioClip whileFlying;
@@ -40,6 +41,8 @@ public class Arrow_flight : MonoBehaviour {
 		soundSource.Play ();
 		//sets timer to change from intitial sound to looped sound
 		StartCoroutine("SoundChange");
+
+		prevES = prevBody.GetComponent<EnemyScript> ();
 	}
 	
 	// Update is called once per frame
@@ -69,7 +72,10 @@ public class Arrow_flight : MonoBehaviour {
 		newBody.GetComponent<PlayerScript> ().CheckDirection ();
 		newBody.GetComponent<PlayerScript> ().enabled = true;
 		prevBody.tag = "Controllable";
-		prevBody.GetComponent<EnemyScript> ().enabled = true;
+		if (prevES != null) {
+			prevES.enabled = false;
+		}
+		//prevBody.GetComponent<EnemyScript> ().enabled = true;
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
