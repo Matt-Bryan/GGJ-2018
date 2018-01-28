@@ -42,8 +42,6 @@ public class Arrow_flight : MonoBehaviour {
 		soundSource = GetComponent<AudioSource> ();
 		soundSource.clip = onCreate;
 		soundSource.Play ();
-		//sets timer to change from intitial sound to looped sound
-		StartCoroutine("SoundChange");
 
 		prevES = prevBody.GetComponent<EnemyScript> ();
 	}
@@ -113,16 +111,6 @@ public class Arrow_flight : MonoBehaviour {
 		arrowReturn ();
 		//yield return new WaitForSeconds (flight_death_time);
 		//GameObject.Find ("GameControllerObject").SendMessage ("Die");
-	}
-
-		
-	IEnumerator SoundChange(){
-		yield return new WaitForSeconds (onCreateLength);
-		if (!is_returning) {
-			soundSource.loop = true;
-			soundSource.clip = whileFlying;
-			soundSource.Play ();
-		}
 	}
 
 	void arrowReturn(){
