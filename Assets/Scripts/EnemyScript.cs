@@ -62,7 +62,7 @@ public class EnemyScript : MonoBehaviour {
 				}
 				else {
 					transform.position = Vector2.MoveTowards(transform.position,
-						gPlayer.player.transform.position, enemySpeed);
+						gPlayer.player.transform.position, enemySpeed*2);
 					if ((selfPosition.x + playerPosition.x) < 0 &&
 						transform.localScale.x > 0) {
 						Flip();
