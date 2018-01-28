@@ -6,6 +6,7 @@ public class Arrow_aim : MonoBehaviour {
 	private Transform arrowTransform;
 	private Vector2 arrowDirection;
 	private float mouseLocX;
+	private Rigidbody2D parentRB;
 	private float mouseLocY;
 	public GameObject arrowProjectile;
 	GameObject playerCamera;
@@ -13,6 +14,7 @@ public class Arrow_aim : MonoBehaviour {
 	private static float piTimes2 = 6.28f;
 	// Use this for initialization
 	void Start () {
+		parentRB = GetCompontentInParent<Rigidbody2D> ();
 		arrowTransform = GetComponent<Transform> ();
 		playerCamera = GameObject.Find ("Main Camera");
 	}
@@ -34,6 +36,7 @@ public class Arrow_aim : MonoBehaviour {
 		projectile.GetComponent<Arrow_flight> ().prevBody = transform.parent.gameObject;
 		playerCamera.transform.SetParent (projectile.transform);
 		GetComponentInParent<PlayerScript> ().enabled = false;
+		parentRB.velocity = new vector2 (0.0f, parentRB.velocity.y);
 		Destroy (arrowTransform.gameObject);
 	}
 }
