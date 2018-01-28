@@ -25,6 +25,7 @@ public class textIntro : MonoBehaviour {
 	void Start () {
 		soundSource = GetComponent<AudioSource> ();
 		canvasText = GetComponent<Text> ();
+		canvasText.fontSize = 20;
 	}
 	
 	// Update is called once per frame
@@ -41,7 +42,7 @@ public class textIntro : MonoBehaviour {
 		} else if (currentTime < fifthStep) {
 			canvasText.text = ("But that was a long time ago");
 		} else if (currentTime < sixthStep) {
-			canvasText.text = ("Now something has returned to your prison");
+			canvasText.text = ("Now someone has returned to your prison");
 		} else if (currentTime < seventhStep) {
 			canvasText.text = ("And they come with new hosts");
 		} else {
