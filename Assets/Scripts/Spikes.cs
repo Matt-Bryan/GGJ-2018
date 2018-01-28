@@ -35,7 +35,7 @@ public class Spikes : MonoBehaviour {
 				other.gameObject.transform.GetComponent<PlayerScript> ().Die ();	
 			}
 		}
-		else if(other.gameObject.tag == "Enemy"){
+		else if(other.gameObject.tag == "Controllable"){
 			if(other.gameObject.GetComponent<EnemyScript> ().enabled){
 				GameObject.Destroy (other.gameObject);
 			}
