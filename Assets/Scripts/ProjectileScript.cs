@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
 
-	private float killTime;
-	private float tiemr = 0.0f;
+	private float killTime = 100.0f;
+	private float timer = 0.0f;
 
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag == "Ground" || col.gameObject.tag == "Wall"){
 			GameObject.Destroy (gameObject);
+		}
+	}
+
+	void Update() {
+		timer += Time.deltaTime;
+		if (timer >= killTime) {
+			Destroy(this);
 		}
 	}
 
