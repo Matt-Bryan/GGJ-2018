@@ -22,6 +22,8 @@ public class EnemyScript : MonoBehaviour {
 	public aoeAttack aoe;
 	private bool isAoe = false;
 
+	public bool wizard = false;
+
 	private Animator enemyAnim;
 
 	public GlobalPlayer gPlayer;
@@ -37,9 +39,11 @@ public class EnemyScript : MonoBehaviour {
 		enemyAnim = GetComponent<Animator>();
 		if (projAtk != null){
 			isProjAtk = true;
+			wizard = true;
 		}
 		else if(aoe != null){
 			isAoe = true;
+			wizard = true;
 		}
 
 		soundSource = GetComponent<AudioSource> ();
@@ -54,6 +58,10 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+//		if((left && gameObject.transform.localScale.x < 0) || (!left || gameObject.transform.localScale.x > 0)){
+//			Flip ();
+//		}
 
 		if (enemyRigidbody.velocity.magnitude > 0) {
 			soundSource.UnPause ();
@@ -72,7 +80,11 @@ public class EnemyScript : MonoBehaviour {
 			playerPosition - selfPosition);
 		Debug.DrawRay (selfPosition, playerPosition - selfPosition);
 
-		enemyAnim.Play("EnemyWalking");
+		if (isAoe || isProjAtk) {
+			enemyAnim.Play ("EnemyWizardWalking");	
+		} else {
+			enemyAnim.Play ("EnemyWalking");
+		}
 
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
 			float enemyToPlayerDist =
@@ -80,20 +92,22 @@ public class EnemyScript : MonoBehaviour {
 			if (enemyToPlayerDist < detectDistance) {
 				patrol = false;
 				if (isProjAtk) {
+					enemyAnim.Play ("EnemyWizardIdle");
 					projAtk.tryToAttack (hit.collider.gameObject);
 				}
 				else if (isAoe) {
 					Debug.Log ("aoe attempt");
+					enemyAnim.Play ("EnemyWizardIdle");
 					aoe.tryToAttack();
 				}
 				else {
 					transform.position = Vector2.MoveTowards(transform.position,
 						gPlayer.player.transform.position, enemySpeed*2);
-					if ((selfPosition.x + playerPosition.x) < 0 &&
+					if ((selfPosition.x > playerPosition.x) &&
 						transform.localScale.x > 0) {
 						Flip();
 					}
-					else if ((selfPosition.x + playerPosition.x) > 0 &&
+					else if ((selfPosition.x < playerPosition.x) &&
 						transform.localScale.x < 0) {
 						Flip();
 					}
@@ -141,6 +155,18 @@ public class EnemyScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 		if(enabled == true && patrol && col.gameObject.tag == "TurnPoint"){
 			left = !left;
+		}
+	}
+
+	public void CheckDirection(){
+		float x = gameObject.transform.localScale.x;
+		if (x < 0) {
+			left = true;
+		} else if(x > 0){
+			left = false;
+		}
+		else{
+			Debug.LogWarning ("Something broken? (Flipping Sprite)");
 		}
 	}
 }
