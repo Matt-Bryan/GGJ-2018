@@ -93,6 +93,12 @@ public class Arrow_flight : MonoBehaviour {
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 
+		if (newBody.transform.GetChild(0).transform.localScale.x * newBody.transform.localScale.x < 0) {
+			Vector3 childTransform = newBody.transform.GetChild(0).transform.localScale;
+			childTransform.x *= -1;
+			newBody.transform.GetChild(0).transform.localScale = childTransform;
+		}
+
 		playerCamera.transform.SetParent (newBody.transform);
 		playerCamera.transform.localPosition = new Vector3 (0.0f, 0.0f, -10.0f);
 		if (newES != null) {
