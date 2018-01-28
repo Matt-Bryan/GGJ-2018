@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114139978198978680}
   - component: {fileID: 114156175836512056}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemySound
   m_TagString: Controllable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,8 +103,7 @@ MonoBehaviour:
   enemySpeed: 0.01
   detectDistance: 5
   player: {fileID: 0}
-  patrolPt1: {x: 0, y: 0}
-  patrolPt2: {x: 0, y: 0}
+  projAtk: {fileID: 0}
   aoe: {fileID: 0}
 --- !u!114 &114156175836512056
 MonoBehaviour:
@@ -119,6 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   jumpSpeed: 5
+  thisLevel: 
+  nextLevel: 
 --- !u!212 &212846181173721276
 SpriteRenderer:
   m_ObjectHideFlags: 1
