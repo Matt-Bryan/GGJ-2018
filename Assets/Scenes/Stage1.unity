@@ -12222,6 +12222,11 @@ Prefab:
       propertyPath: projAtk
       value: 
       objectReference: {fileID: 2075098132}
+    - target: {fileID: 114139978198978680, guid: 5f62aea04b1918043be25256bf26e2bd,
+        type: 2}
+      propertyPath: enemySpeed
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f62aea04b1918043be25256bf26e2bd, type: 2}
   m_IsPrefabParent: 0
@@ -47471,6 +47476,16 @@ Prefab:
     - target: {fileID: 1227570636252874, guid: 5f62aea04b1918043be25256bf26e2bd, type: 2}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114139978198978680, guid: 5f62aea04b1918043be25256bf26e2bd,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2122353136}
+    - target: {fileID: 114139978198978680, guid: 5f62aea04b1918043be25256bf26e2bd,
+        type: 2}
+      propertyPath: enemySpeed
+      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f62aea04b1918043be25256bf26e2bd, type: 2}
