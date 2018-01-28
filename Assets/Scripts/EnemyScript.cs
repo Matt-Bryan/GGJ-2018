@@ -45,10 +45,10 @@ public class EnemyScript : MonoBehaviour {
 		Debug.DrawRay (selfPosition, playerPosition - selfPosition);
 		//Debug.Log (Mathf.Sqrt ());
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
-			patrol = false;
 			float enemyToPlayerDist =
 				Mathf.Abs(Vector2.Distance(selfPosition, playerPosition));
 			if (enemyToPlayerDist < detectDistance) {
+				patrol = false;
 				if(isProjAtk){
 					projAtk.tryToAttack (hit.collider.gameObject);
 				}
@@ -60,6 +60,9 @@ public class EnemyScript : MonoBehaviour {
 				transform.position = Vector2.MoveTowards(transform.position,
 					player.transform.position, enemySpeed);
 				}
+			}
+			else{
+				patrol = true;
 			}
 		}
 		else{
