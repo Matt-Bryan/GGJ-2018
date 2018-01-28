@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 	/*Jump Heights: 5 is one block high; 7 is two blocks high*/
 
 	public string thisLevel;
+	public string nextLevel;
 
 	private bool isGrounded = true;
 	private bool isFacingRight = true;
@@ -59,8 +60,9 @@ public class PlayerScript : MonoBehaviour {
 				break;
 			case "Controllable":
 			case "Projectile":
-				Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);
-				SceneManager.LoadScene ("Level8");
+				//Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);
+				//SceneManager.LoadScene ("Level8");
+				Die ();
 				break;
 			default:
 				Debug.LogWarning ("There is no default behavior for player collisions with: " + col.gameObject);
@@ -72,8 +74,9 @@ public class PlayerScript : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D col){
 		if(this.enabled){
 			if(col.gameObject.tag == "Projectile"){
-				Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);
-				SceneManager.LoadScene ("Level8");
+				//Debug.Log ("This: " + gameObject + "\nOther: " + col.gameObject);
+				//SceneManager.LoadScene ("Level8");
+				Die ();
 			}
 
 		}
@@ -89,5 +92,13 @@ public class PlayerScript : MonoBehaviour {
 		//Vector3 theScale = transform.localScale;
 		//theScale.x *= -1;
 		//transform.localScale = theScale;
+	}
+
+	public void Die(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene (thisLevel);
+	}
+
+	public void NextLevel(){
+		UnityEngine.SceneManagement.SceneManager.LoadScene (nextLevel);
 	}
 }

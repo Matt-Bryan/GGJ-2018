@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Arrow_flight : MonoBehaviour {
 	private float flight_time = 3.0f;
+	private float flight_death_time = 5.0f;
 	private bool is_returning = false;
 	public GameObject prevBody;
 	public int arrowSpeed;
@@ -44,6 +46,7 @@ public class Arrow_flight : MonoBehaviour {
 		newBody.GetComponent<PlayerScript> ().enabled = true;
 		newBody.GetComponent<EnemyScript> ().enabled = false;
 		prevBody.tag = "Controllable";
+		prevBody.GetComponent<EnemyScript> ().enabled = true;
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
@@ -54,6 +57,8 @@ public class Arrow_flight : MonoBehaviour {
 	IEnumerator ArrowTimedReturn(){
 		yield return new WaitForSeconds(flight_time);
 		arrowReturn ();
+		yield return new WaitForSeconds (flight_death_time);
+		GameObject.Find ("GameManager").SendMessage ("Die");
 	}
 		
 	void arrowReturn(){

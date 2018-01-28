@@ -9,20 +9,27 @@ public class EnemyScript : MonoBehaviour {
 	public float detectDistance = 3f;
 	public GameObject player;
 
-	public Vector2 patrolPt1;
-	public Vector2 patrolPt2;
-
 	//private bool towardPt1 = true;
 	private bool left = true;
 	private bool patrol = true;
 
+	/*An enemy can only be either projectile or aoe, not both.  If both scripts are set, 
+	 * then projectiile takes precedence*/
+
+	public projectileAttack projAtk;
+	private bool isProjAtk = false;
+
 	public aoeAttack aoe;
 	private bool isAoe = false;
+
 
 	// Use this for initialization
 	void Start () {
 
-		if(aoe != null){
+		if(projAtk != null){
+			isProjAtk = true;
+		}
+		else if(aoe != null){
 			isAoe = true;
 		}
 
@@ -35,20 +42,27 @@ public class EnemyScript : MonoBehaviour {
 
 		RaycastHit2D hit = Physics2D.Raycast(selfPosition,
 			playerPosition - selfPosition);
-
+		Debug.DrawRay (selfPosition, playerPosition - selfPosition);
+		//Debug.Log (Mathf.Sqrt ());
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
-			patrol = false;
 			float enemyToPlayerDist =
 				Mathf.Abs(Vector2.Distance(selfPosition, playerPosition));
 			if (enemyToPlayerDist < detectDistance) {
-				if(isAoe){
-					Debug.Log (aoe);
+				patrol = false;
+				if(isProjAtk){
+					projAtk.tryToAttack (hit.collider.gameObject);
+				}
+				else if(isAoe){
+					//Debug.Log (aoe);
 					aoe.tryToAttack ();
 				}
 				else{
 				transform.position = Vector2.MoveTowards(transform.position,
 					player.transform.position, enemySpeed);
 				}
+			}
+			else{
+				patrol = true;
 			}
 		}
 		else{
@@ -78,7 +92,7 @@ public class EnemyScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
-		if(enabled = true && patrol && col.gameObject.tag == "TurnPoint"){
+		if(enabled == true && patrol && col.gameObject.tag == "TurnPoint"){
 			left = !left;
 		}
 
