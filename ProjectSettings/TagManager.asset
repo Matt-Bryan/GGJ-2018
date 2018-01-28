@@ -10,6 +10,7 @@ TagManager:
   - Arrow_Flying
   - Projectile
   - TurnPoint
+  - Wall
   layers:
   - Default
   - TransparentFX
