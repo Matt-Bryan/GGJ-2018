@@ -130,4 +130,16 @@ public class PlayerScript : MonoBehaviour {
 	public void NextLevel(){
 		SceneManager.LoadScene(nextLevel);
 	}
+
+	public void CheckDirection(){
+		float x = gameObject.transform.localScale.x;
+		if (x < 0) {
+			isFacingRight = false;
+		} else if(x > 0){
+			isFacingRight = true;
+		}
+		else{
+			Debug.LogWarning ("Something broken? (Flipping Sprite)");
+		}
+	}
 }

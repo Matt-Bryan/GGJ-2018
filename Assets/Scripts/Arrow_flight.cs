@@ -66,6 +66,7 @@ public class Arrow_flight : MonoBehaviour {
 	void takeControl(GameObject newBody){
 		Debug.Log (is_returning);
 		Debug.Log ("taking control");
+		newBody.GetComponent<PlayerScript> ().CheckDirection ();
 		newBody.GetComponent<PlayerScript> ().enabled = true;
 		prevBody.tag = "Controllable";
 		prevBody.GetComponent<EnemyScript> ().enabled = true;
