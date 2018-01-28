@@ -59,9 +59,9 @@ public class EnemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
-		if((left && gameObject.transform.localScale.x < 0) || (!left || gameObject.transform.localScale.x > 0)){
-			Flip ();
-		}
+//		if((left && gameObject.transform.localScale.x < 0) || (!left || gameObject.transform.localScale.x > 0)){
+//			Flip ();
+//		}
 
 		if (enemyRigidbody.velocity.magnitude > 0) {
 			soundSource.UnPause ();
