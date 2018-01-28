@@ -17,7 +17,7 @@ public class Arrow_aim : MonoBehaviour {
 	private static float piTimes2 = 6.28f;
 	// Use this for initialization
 	void Start () {
-		parentPS = GetComponent<PlayerScript> ();
+		parentPS = GetComponentInParent<PlayerScript> ();
 		sr = GetComponent<SpriteRenderer> ();
 		parentRB = GetComponentInParent<Rigidbody2D> ();
 		arrowTransform = GetComponent<Transform> ();
@@ -46,6 +46,7 @@ public class Arrow_aim : MonoBehaviour {
 		playerCamera.transform.SetParent (projectile.transform);
 		if (parentPS != null) {
 			parentPS.enabled = false;
+			parentPS.playerAnim.Play ("PlayerIdle"); 
 		}
 		parentRB.velocity = new Vector2 (0.0f, parentRB.velocity.y);
 		Destroy (arrowTransform.gameObject);

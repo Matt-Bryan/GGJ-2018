@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool isGrounded = true;
 	private bool isFacingRight = true;
 	private Rigidbody2D rb2d;
-	private Animator playerAnim;
+	public Animator playerAnim;
 
 	//audio
 	private AudioSource soundSource;

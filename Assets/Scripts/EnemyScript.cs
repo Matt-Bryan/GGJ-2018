@@ -101,6 +101,7 @@ public class EnemyScript : MonoBehaviour {
 					aoe.tryToAttack();
 				}
 				else {
+					enemyAnim.Play ("EnemyWithSwordWalking"); 
 					transform.position = Vector2.MoveTowards(transform.position,
 						gPlayer.player.transform.position, enemySpeed*2);
 					if ((selfPosition.x > playerPosition.x) &&
