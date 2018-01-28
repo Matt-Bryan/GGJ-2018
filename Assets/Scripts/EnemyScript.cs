@@ -33,6 +33,9 @@ public class EnemyScript : MonoBehaviour {
 
 	private Rigidbody2D enemyRigidbody;
 
+	private float animSwapTime = 0f;
+	public float animDelay;
+
 	// Use this for initialization
 	void Start () {
 
@@ -58,7 +61,7 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
+		animSwapTime += Time.deltaTime;
 //		if((left && gameObject.transform.localScale.x < 0) || (!left || gameObject.transform.localScale.x > 0)){
 //			Flip ();
 //		}
@@ -80,10 +83,12 @@ public class EnemyScript : MonoBehaviour {
 			playerPosition - selfPosition);
 		Debug.DrawRay (selfPosition, playerPosition - selfPosition);
 
-		if (isAoe || isProjAtk) {
-			enemyAnim.Play ("EnemyWizardWalking");	
-		} else {
-			enemyAnim.Play ("EnemyWalking");
+		if(animSwapTime >= animDelay){
+			if (isAoe || isProjAtk) {
+				enemyAnim.Play ("EnemyWizardWalking");	
+			} else {
+				enemyAnim.Play ("EnemyWalking");
+			}
 		}
 
 		if (hit.collider != null && hit.collider.gameObject.tag == "Player") {
@@ -93,14 +98,18 @@ public class EnemyScript : MonoBehaviour {
 				patrol = false;
 				if (isProjAtk) {
 					enemyAnim.Play ("EnemyWizardIdle");
+					animSwapTime = 0;
 					projAtk.tryToAttack (hit.collider.gameObject);
 				}
 				else if (isAoe) {
 					Debug.Log ("aoe attempt");
 					enemyAnim.Play ("EnemyWizardIdle");
+					animSwapTime = 0;
 					aoe.tryToAttack();
 				}
 				else {
+					enemyAnim.Play ("EnemyWithSwordWalking"); 
+					animSwapTime = 0;
 					transform.position = Vector2.MoveTowards(transform.position,
 						gPlayer.player.transform.position, enemySpeed*2);
 					if ((selfPosition.x > playerPosition.x) &&

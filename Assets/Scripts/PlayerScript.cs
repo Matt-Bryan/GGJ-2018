@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool isGrounded = true;
 	private bool isFacingRight = true;
 	private Rigidbody2D rb2d;
-	private Animator playerAnim;
+	public Animator playerAnim;
 
 	//audio
 	private AudioSource soundSource;
@@ -40,6 +40,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// FixedUpdate is called once per frame
 	void Update() {
+		
 		float x = Input.GetAxis("Horizontal");
 
 		if (x < 0f && isFacingRight) {

@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 1301185218166962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.3, z: 1}
+  m_LocalScale: {x: 3, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 4933436752158902}
   m_RootOrder: 1
@@ -335,7 +335,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -380,8 +380,10 @@ MonoBehaviour:
   detectDistance: 3
   projAtk: {fileID: 0}
   aoe: {fileID: 0}
+  wizard: 0
   gPlayer: {fileID: 0}
   walkingSound: {fileID: 0}
+  animDelay: 0
 --- !u!114 &114229371016627110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,6 +414,7 @@ MonoBehaviour:
   thisLevel: Stage1
   nextLevel: 
   isGrounded: 1
+  playerAnim: {fileID: 0}
   walkingSound: {fileID: 0}
 --- !u!124 &124300090673849164
 Behaviour:
@@ -454,7 +457,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dd921b2d0ceba88458d535f6d60c010b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08af62c9d8d560b4b92f8ea2c4440e0b, type: 3}
   m_Color: {r: 0, g: 0.88235295, b: 0.77281946, a: 1}
   m_FlipX: 0
   m_FlipY: 0
