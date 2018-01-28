@@ -7,7 +7,6 @@ public class EnemyScript : MonoBehaviour {
 
 	public float enemySpeed;
 	public float detectDistance = 3f;
-	public GameObject player;
 
 	private bool left = true;
 	private bool patrol = true;
@@ -25,8 +24,11 @@ public class EnemyScript : MonoBehaviour {
 
 	private Animator enemyAnim;
 
+	public GlobalPlayer gPlayer;
+
 	// Use this for initialization
 	void Start () {
+
 		enemyAnim = GetComponent<Animator>();
 		if (projAtk != null){
 			isProjAtk = true;
@@ -39,7 +41,7 @@ public class EnemyScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector2 selfPosition = transform.position;
-		Vector2 playerPosition = player.transform.position;
+		Vector2 playerPosition = gPlayer.player.transform.position;
 
 		RaycastHit2D hit = Physics2D.Raycast(selfPosition,
 			playerPosition - selfPosition);
@@ -60,7 +62,7 @@ public class EnemyScript : MonoBehaviour {
 				}
 				else {
 					transform.position = Vector2.MoveTowards(transform.position,
-						player.transform.position, enemySpeed);
+						gPlayer.player.transform.position, enemySpeed);
 					if ((selfPosition.x + playerPosition.x) < 0 &&
 						transform.localScale.x > 0) {
 						Flip();
