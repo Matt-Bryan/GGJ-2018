@@ -13,10 +13,14 @@ public class Arrow_flight : MonoBehaviour {
 	Rigidbody2D arrowRigidbody;
 	private GameObject playerCamera;
 
+	private Animator anim;
+
 	// Use this for initialization
 	void Start () {
-		playerCamera = GameObject.Find ("Main Camera");
+		playerCamera = GameObject.Find("Main Camera");
 		arrowRigidbody = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator>();
+
 		is_returning = false;
 		arrowRigidbody.velocity = transform.right * arrowSpeed;
 		//StartCoroutine ("ArrowTimedReturn");
@@ -24,6 +28,7 @@ public class Arrow_flight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		anim.Play("SoulFire");
 		if (is_returning && prevBody != null)
 			arrowRigidbody.velocity = (prevBody.transform.position - transform.position) * 3;
 	}
