@@ -44,13 +44,13 @@ public class Arrow_flight : MonoBehaviour {
 		Debug.Log (is_returning);
 		Debug.Log ("taking control");
 		newBody.GetComponent<PlayerScript> ().enabled = true;
-		newBody.GetComponent<EnemyScript> ().enabled = false;
 		prevBody.tag = "Controllable";
 		prevBody.GetComponent<EnemyScript> ().enabled = true;
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
 		playerCamera.transform.localPosition = new Vector3 (0.0f, 0.0f, -10.0f);
+		newBody.GetComponent<EnemyScript> ().enabled = false;
 		Destroy (gameObject);
 	}
 
