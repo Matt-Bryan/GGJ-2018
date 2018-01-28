@@ -55,7 +55,9 @@ public class Arrow_flight : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.gameObject.tag == "Controllable" && (is_returning || !col.gameObject.Equals (prevBody))) {
 			takeControl (col.gameObject);
-			prevBody.GetComponent<EnemyScript> ().gPlayer.player = col.gameObject;
+			if (prevES) {
+				prevBody.GetComponent<EnemyScript> ().gPlayer.player = col.gameObject;
+			}
 		} else if (col.gameObject.tag == "Ground") {
 			arrowReturn ();		
 		}
@@ -76,9 +78,10 @@ public class Arrow_flight : MonoBehaviour {
 			prevES.enabled = false;
 		}
 		//prevBody.GetComponent<EnemyScript> ().enabled = true;
-
-		prevBody.GetComponent <EnemyScript> ().CheckDirection ();
-		prevBody.GetComponent<EnemyScript> ().enabled = true;
+		if(prevES != null){
+			prevBody.GetComponent <EnemyScript> ().CheckDirection ();
+			prevBody.GetComponent<EnemyScript> ().enabled = true;
+		}
 
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
