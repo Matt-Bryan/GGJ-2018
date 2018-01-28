@@ -177,8 +177,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.011099458}
-  m_Size: {x: 0.555603, y: 1.0621989}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 1.04}
   m_Direction: 0
 --- !u!81 &81001053205890768
 AudioListener:
@@ -297,9 +297,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 0
   detectDistance: 3
-  player: {fileID: 0}
   projAtk: {fileID: 0}
   aoe: {fileID: 0}
+  gPlayer: {fileID: 0}
 --- !u!114 &114229371016627110
 MonoBehaviour:
   m_ObjectHideFlags: 1

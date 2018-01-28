@@ -40,6 +40,9 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+//		if((left && gameObject.transform.position.x < 0) || (!left && gameObject.transform.position.x > 0)){
+//			Flip ();
+//		}
 		Vector2 selfPosition = transform.position;
 		Vector2 playerPosition = gPlayer.player.transform.position;
 
