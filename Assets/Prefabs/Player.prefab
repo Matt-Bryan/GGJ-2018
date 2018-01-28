@@ -335,7 +335,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -380,8 +380,10 @@ MonoBehaviour:
   detectDistance: 3
   projAtk: {fileID: 0}
   aoe: {fileID: 0}
+  wizard: 0
   gPlayer: {fileID: 0}
   walkingSound: {fileID: 0}
+  animDelay: 0
 --- !u!114 &114229371016627110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,6 +414,7 @@ MonoBehaviour:
   thisLevel: Stage1
   nextLevel: 
   isGrounded: 1
+  playerAnim: {fileID: 0}
   walkingSound: {fileID: 0}
 --- !u!124 &124300090673849164
 Behaviour:
