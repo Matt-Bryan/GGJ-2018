@@ -103,9 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 0.03
   detectDistance: 5
-  player: {fileID: 0}
   projAtk: {fileID: 114949102259418846}
   aoe: {fileID: 0}
+  gPlayer: {fileID: 0}
 --- !u!114 &114156175836512056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projPrefab: {fileID: 1980576269852912, guid: 6bc206aa97a52094aacf0e3e39b0f93f, type: 2}
-  projSpeed: 75
-  cooldown: 3
+  projSpeed: 150
+  cooldown: 2
 --- !u!212 &212846181173721276
 SpriteRenderer:
   m_ObjectHideFlags: 1
