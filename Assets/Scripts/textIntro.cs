@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class textIntro : MonoBehaviour {
 
@@ -45,14 +46,14 @@ public class textIntro : MonoBehaviour {
 			canvasText.text = ("And they come with new hosts");
 		} else {
 			canvasText.text = ("[Left Click] Take Control. Escape.");
-			//GameObject.Find ("Arrow").SetActive (true);
+			StartCoroutine ("LoadLevel1");
 		}
 		
 	}
 
-	void Update() {
-		if (Input.GetButtonDown("Fire1") && (currentTime > seventhStep) ){
-			Destroy(canvasText.gameObject);
-		}
+
+	IEnumerator LoadLevel1(){
+		yield return new WaitForSeconds (5.0f);
+		SceneManager.LoadScene ("Stage1");
 	}
 }
