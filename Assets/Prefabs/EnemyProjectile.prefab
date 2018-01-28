@@ -61,7 +61,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 05ca25b25a2d37a43a6914ec24acc956, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 0.05
-  detectDistance: 5
+  detectDistance: 8
   projAtk: {fileID: 114764197134875656}
   aoe: {fileID: 0}
   gPlayer: {fileID: 0}
@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990b9a55bfe13d24e9cac70ec6b88628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projPrefab: {fileID: 0}
-  projSpeed: 0
-  cooldown: 0
-  projDestroTime: 0
+  projPrefab: {fileID: 1980576269852912, guid: 6bc206aa97a52094aacf0e3e39b0f93f, type: 2}
+  projSpeed: 200
+  cooldown: 1
+  projDestroTime: 3
 --- !u!212 &212278250708150384
 SpriteRenderer:
   m_ObjectHideFlags: 1
