@@ -75,7 +75,7 @@ public class Arrow_flight : MonoBehaviour {
 		newPS = newBody.GetComponent<PlayerScript> ();
 		if (newES != null) {
 			newES.gPlayer.player = newBody.gameObject;
-		} 
+		}
 		if (newPS != null) {
 			newPS.CheckDirection ();
 			newPS.enabled = true;
