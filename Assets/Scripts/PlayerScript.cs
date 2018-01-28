@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
-	public float maxSpeed = 10;
-	public float jumpSpeed = 10;
+	public float maxSpeed;
+	public float jumpSpeed;
 
 	/*Jump Heights: 5 is one block high; 7 is two blocks high*/
 
-	public float height = 1.2f;
+	public float height;
 
 	//height of ridigbody
 
@@ -86,7 +86,6 @@ public class PlayerScript : MonoBehaviour {
 
 		//attempt to change isGrounded to raycast
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-		Debug.DrawLine (transform.position, -Vector2.up);
 		Debug.Log (hit.collider.gameObject);
 		if (hit.collider != null && hit.collider.tag == "Ground") {
 			float distance = Mathf.Abs (hit.point.y - transform.position.y);
