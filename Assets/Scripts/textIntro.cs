@@ -45,14 +45,14 @@ public class textIntro : MonoBehaviour {
 			canvasText.text = ("And they come with new hosts");
 		} else {
 			canvasText.text = ("[Left Click] Take Control. Escape.");
-			GameObject.Find ("Arrow").SetActive (true);
+			//GameObject.Find ("Arrow").SetActive (true);
 		}
 		
 	}
 
 	void Update() {
 		if (Input.GetButtonDown("Fire1") && (currentTime > seventhStep) ){
-			Destroy(gameObject);
+			Destroy(canvasText.gameObject);
 		}
 	}
 }
