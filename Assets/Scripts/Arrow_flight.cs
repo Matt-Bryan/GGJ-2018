@@ -10,6 +10,7 @@ public class Arrow_flight : MonoBehaviour {
 	public int arrowSpeed;
 
 	private bool is_returning = false;
+	private EnemyScript prevES;
 
 	public AudioClip onCreate;
 	public AudioClip whileFlying;
@@ -40,6 +41,8 @@ public class Arrow_flight : MonoBehaviour {
 		soundSource.Play ();
 		//sets timer to change from intitial sound to looped sound
 		StartCoroutine("SoundChange");
+
+		prevES = prevBody.GetComponent<EnemyScript> ();
 	}
 	
 	// Update is called once per frame
@@ -52,7 +55,9 @@ public class Arrow_flight : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col){
 		if (col.gameObject.tag == "Controllable" && (is_returning || !col.gameObject.Equals (prevBody))) {
 			takeControl (col.gameObject);
-			prevBody.GetComponent<EnemyScript> ().gPlayer.player = col.gameObject;
+			if (prevES) {
+				prevBody.GetComponent<EnemyScript> ().gPlayer.player = col.gameObject;
+			}
 		} else if (col.gameObject.tag == "Ground") {
 			arrowReturn ();		
 		}
@@ -69,8 +74,15 @@ public class Arrow_flight : MonoBehaviour {
 		newBody.GetComponent<PlayerScript> ().CheckDirection ();
 		newBody.GetComponent<PlayerScript> ().enabled = true;
 		prevBody.tag = "Controllable";
-		prevBody.GetComponent <EnemyScript> ().CheckDirection ();
-		prevBody.GetComponent<EnemyScript> ().enabled = true;
+		if (prevES != null) {
+			prevES.enabled = false;
+		}
+		//prevBody.GetComponent<EnemyScript> ().enabled = true;
+		if(prevES != null){
+			prevBody.GetComponent <EnemyScript> ().CheckDirection ();
+			prevBody.GetComponent<EnemyScript> ().enabled = true;
+		}
+
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
