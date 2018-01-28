@@ -46,6 +46,7 @@ public class Arrow_flight : MonoBehaviour {
 		newBody.GetComponent<PlayerScript> ().enabled = true;
 		newBody.GetComponent<EnemyScript> ().enabled = false;
 		prevBody.tag = "Controllable";
+		prevBody.GetComponent<EnemyScript> ().enabled = true;
 		newBody.tag = "Player";
 		GameObject.Instantiate (arrowAiming, newBody.transform);
 		playerCamera.transform.SetParent (newBody.transform);
