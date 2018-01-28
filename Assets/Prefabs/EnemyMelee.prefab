@@ -90,10 +90,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f328d4984df41ff459eebf0107e5db3a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.1
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   thisLevel: Stage1
   nextLevel: 
   isGrounded: 1
-  walkingSound: {fileID: 0}
+  walkingSound: {fileID: 8300000, guid: f328d4984df41ff459eebf0107e5db3a, type: 3}
 --- !u!114 &114417704909490134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
   projAtk: {fileID: 0}
   aoe: {fileID: 0}
   gPlayer: {fileID: 0}
-  walkingSound: {fileID: 8300000, guid: f328d4984df41ff459eebf0107e5db3a, type: 3}
+  walkingSound: {fileID: 0}
 --- !u!212 &212670333580669468
 SpriteRenderer:
   m_ObjectHideFlags: 1
