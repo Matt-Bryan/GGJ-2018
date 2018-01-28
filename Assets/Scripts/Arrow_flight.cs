@@ -29,10 +29,12 @@ public class Arrow_flight : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col){
-		if (col.gameObject.tag == "Controllable" && (is_returning || !col.gameObject.Equals(prevBody)))
+		if (col.gameObject.tag == "Controllable" && (is_returning || !col.gameObject.Equals (prevBody))) {
 			takeControl (col.gameObject);
-		else if (col.gameObject.tag == "Ground")
+			prevBody.GetComponent<EnemyScript> ().gPlayer.player = col.gameObject;
+		} else if (col.gameObject.tag == "Ground") {
 			arrowReturn ();		
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D col){
