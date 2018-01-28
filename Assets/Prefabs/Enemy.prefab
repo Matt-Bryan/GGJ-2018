@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50816429193404916}
   - component: {fileID: 114139978198978680}
   - component: {fileID: 114156175836512056}
+  - component: {fileID: 114949102259418846}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Controllable
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227570636252874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 3, z: 0}
+  m_LocalPosition: {x: 57.32, y: 2.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,10 +101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb6ca189742a3548945c6b6691e84d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 0.01
+  enemySpeed: 0.03
   detectDistance: 5
   player: {fileID: 0}
-  projAtk: {fileID: 0}
+  projAtk: {fileID: 114949102259418846}
   aoe: {fileID: 0}
 --- !u!114 &114156175836512056
 MonoBehaviour:
@@ -121,6 +122,21 @@ MonoBehaviour:
   height: 0.6
   thisLevel: 
   nextLevel: 
+  isGrounded: 1
+--- !u!114 &114949102259418846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1227570636252874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990b9a55bfe13d24e9cac70ec6b88628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projPrefab: {fileID: 1980576269852912, guid: 6bc206aa97a52094aacf0e3e39b0f93f, type: 2}
+  projSpeed: 75
+  cooldown: 3
 --- !u!212 &212846181173721276
 SpriteRenderer:
   m_ObjectHideFlags: 1

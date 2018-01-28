@@ -14,7 +14,7 @@ public class Arrow_aim : MonoBehaviour {
 	private static float piTimes2 = 6.28f;
 	// Use this for initialization
 	void Start () {
-		parentRB = GetCompontentInParent<Rigidbody2D> ();
+		parentRB = GetComponentInParent<Rigidbody2D> ();
 		arrowTransform = GetComponent<Transform> ();
 		playerCamera = GameObject.Find ("Main Camera");
 	}
