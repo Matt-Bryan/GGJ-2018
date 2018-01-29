@@ -46,7 +46,7 @@ public class textIntro : MonoBehaviour {
 		} else if (currentTime < seventhStep) {
 			canvasText.text = ("And they come with new hosts");
 		} else {
-			canvasText.text = ("[Left Click] Take Control. Escape.");
+			canvasText.text = ("[Left Click] Take Control. Escape.\n(LOADING)");
 			StartCoroutine ("LoadLevel1");
 		}
 		
@@ -54,7 +54,7 @@ public class textIntro : MonoBehaviour {
 
 
 	IEnumerator LoadLevel1(){
-		yield return new WaitForSeconds (5.0f);
+		yield return new WaitForSeconds (8.5f);
 		SceneManager.LoadScene ("Stage1");
 	}
 }
