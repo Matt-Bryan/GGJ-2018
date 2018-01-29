@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExitScript : MonoBehaviour {
 
 	void Update(){
-		if(Input.GetKey ("Escape")){
+		if(Input.GetKey ("escape")){
 			Application.Quit ();
 		}
 	}
