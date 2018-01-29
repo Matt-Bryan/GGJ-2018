@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flight_time: 3
   arrowSpeed: 10
-  onCreate: {fileID: 8300000, guid: db48631e04263dc449b0db0bc65b4c4e, type: 3}
+  onCreate: {fileID: 8300000, guid: bdc77b018232ca7498ee544cd9459746, type: 3}
   whileFlying: {fileID: 8300000, guid: 9aac1be61576dd742a49f23c58fc08fd, type: 3}
   onFail: {fileID: 8300000, guid: c0218cc377fddf948983581d3505b287, type: 3}
   onCreateLength: 0.4

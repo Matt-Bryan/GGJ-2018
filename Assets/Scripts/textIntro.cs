@@ -25,7 +25,7 @@ public class textIntro : MonoBehaviour {
 	void Start () {
 		soundSource = GetComponent<AudioSource> ();
 		canvasText = GetComponent<Text> ();
-		canvasText.fontSize = 20;
+		canvasText.fontSize = 50;
 	}
 	
 	// Update is called once per frame
@@ -36,7 +36,7 @@ public class textIntro : MonoBehaviour {
 		} else if (currentTime < secondStep) {
 			canvasText.text = ("They soon realized that their only hope was to restrain the gods");
 		} else if (currentTime < thirdStep) {
-			canvasText.text = ("the god of deceit was lured into a cave beneath a great volcano...");
+			canvasText.text = ("The god of deceit was lured into a cave beneath a great volcano...");
 		} else if (currentTime < fourthStep) {
 			canvasText.text = ("And they trapped you here");
 		} else if (currentTime < fifthStep) {
